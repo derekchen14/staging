@@ -2,3 +2,4 @@ numpy
 faker
 fastapi
 pydantic
+starlette
