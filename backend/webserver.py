@@ -3,7 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import HTMLResponse
 from typing import List, Dict
 from pydantic import BaseModel
-from backend.chat import get_chat, add_chat
+from chat import get_chat, add_chat
 
 app = FastAPI()
 app.add_middleware(
