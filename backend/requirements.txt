@@ -3,3 +3,4 @@ faker
 fastapi
 pydantic
 starlette
+uvicorn
