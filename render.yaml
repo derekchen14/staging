@@ -15,7 +15,11 @@ services:
 - type: web
   name: svelte-frontend
   runtime: static    # possibly node
-  rootDir: frontend
-  staticPublishPath: "public"
   buildCommand: "npm install && npm run build"
+  rootDir: frontend
+  staticPublishPath: ./dist
+  routes:
+  - type: rewrite
+    source: /.*
+    destination: /index.html
 
