@@ -1,6 +1,6 @@
 services:
 - type: web
-  name: fastapi-backend
+  name: staging-backend
   runtime: python
   rootDir: backend
   buildCommand: "pip install -r requirements.txt"
@@ -13,7 +13,7 @@ services:
   #       property: connectionString
 
 - type: web
-  name: svelte-frontend
+  name: staging-frontend
   runtime: static    # possibly node
   buildCommand: "npm install && npm run build"
   rootDir: frontend
