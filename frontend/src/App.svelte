@@ -30,7 +30,7 @@
 </script>
 
 <main>
-  <h1>My Chatbot</h1>
+  <h1>Soleda Chatbot</h1>
   <input bind:value={message} placeholder="Type a message..." />
   <button on:click={sendMessage}>Send</button>
 

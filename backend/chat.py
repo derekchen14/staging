@@ -1,7 +1,7 @@
 from faker import Faker
 fake = Faker()
 
-message_list = [{"user": "Hello Smartbot!", "bot": "Hello, Michelle"}]
+message_list = [{"user": "Hello Smartbot!", "bot": "Hello, Best :)"}]
 
 def get_chat():
     return message_list
