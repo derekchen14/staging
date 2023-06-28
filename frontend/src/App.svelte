@@ -3,15 +3,16 @@
 
   let message = '';
   let messages = [];
+  const serverUrl = import.meta.env.VITE_SERVER_URL;
 
   onMount(async () => {
-    const res = await fetch('http://localhost:8000/messages');
+    const res = await fetch(`http://${serverUrl}/messages`);
     const data = await res.json();
     messages = data.messages || []; // if messages is undefined, it will be set to an empty array
   });
 
   async function sendMessage() {
-    const res = await fetch('http://localhost:8000/messages', {
+    const res = await fetch(`http://${serverUrl}/messages`, {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({ user: message }),
@@ -21,7 +22,7 @@
     const { status } = await res.json();
 
     if (status === 'success') {
-      const res = await fetch('http://localhost:8000/messages');
+      const res = await fetch(`http://${serverUrl}/messages`);
       const data = await res.json();
       messages = data.messages;
     }
