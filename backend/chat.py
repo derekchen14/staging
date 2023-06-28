@@ -15,3 +15,9 @@ def add_chat(user_message: str):
         break_idx = bot_message.find(". ") + 1
         bot_message = bot_message[:break_idx]
     message_list.append({"user": user_message, "bot": bot_message})
+
+def reset_chat():
+    global message_list
+    new_name = fake.first_name()
+    message_list.clear()
+    message_list.append({"user": "Hello Smartbot!", "bot": f"Hello, {new_name} :)"})

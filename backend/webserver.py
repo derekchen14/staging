@@ -3,7 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import HTMLResponse
 from typing import List, Dict
 from pydantic import BaseModel
-from chat import get_chat, add_chat
+from chat import get_chat, add_chat, reset_chat
 
 app = FastAPI()
 app.add_middleware(
@@ -38,4 +38,9 @@ def get_messages():
 @app.post("/messages")
 def post_message(message: Message):
     add_chat(message.user)
+    return {"status": "success"}
+
+@app.get("/reset")
+def reset():
+    reset_chat()
     return {"status": "success"}
