@@ -1,0 +1,21 @@
+services:
+- type: web
+  name: fastapi-backend
+  runtime: python
+  rootDir: backend
+  buildCommand: "pip install -r requirements.txt"
+  startCommand: "uvicorn webserver:app --host 0.0.0.0 --port 8000"
+  healthCheckPath: /health
+  # envVars:
+  #   - key: DATABASE_URL  # postgres connection
+  #     fromDatabase:
+  #       name: soleda-database
+  #       property: connectionString
+
+- type: web
+  name: svelte-frontend
+  runtime: static    # possibly node
+  rootDir: frontend
+  staticPublishPath: "public"
+  buildCommand: "npm install && npm run build"
+
