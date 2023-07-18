@@ -19,11 +19,10 @@
 				<li aria-current={$page.url.pathname.startsWith('/login') ? 'page' : undefined}>
 					<a href="/login">Log-In</a>
 				</li>
+				<li aria-current={$page.url.pathname.startsWith('/signup') ? 'page' : undefined}>
+					<a href="/signup">Sign-Up</a>
+				</li>
 			{/if}
-
-			<li aria-current={$page.url.pathname.startsWith('/signup') ? 'page' : undefined}>
-				<a href="/signup">Sign-Up</a>
-			</li>
 			<li aria-current={$page.url.pathname.startsWith('/help') ? 'page' : undefined}>
 				<a href="https://www.canva.com/design/DAFn5yv60xM/cF9TPVZuonwnorCHl-5iVQ/watch?utm_content=DAFn5yv60xM&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink">Help</a>
 			</li>
