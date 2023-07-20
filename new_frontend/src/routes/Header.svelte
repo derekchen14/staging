@@ -27,7 +27,7 @@
 				<a href="https://www.canva.com/design/DAFn5yv60xM/cF9TPVZuonwnorCHl-5iVQ/watch?utm_content=DAFn5yv60xM&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink">Help</a>
 			</li>
 			<li aria-current={$page.url.pathname.startsWith('/feedback') ? 'page' : undefined}>
-				<a href="/feedback">feedback</a>
+				<a href="https://x8l3b1ogtwp.typeform.com/to/dXWQchhR">feedback</a>
 			</li>
 			<li aria-current={$page.url.pathname.startsWith('/blog') ? 'page' : undefined}>
 				<a href="https://morethanoneturn.com/">Blog</a>

@@ -1,0 +1,5935 @@
+[
+    {
+        "convo_id": 1,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "What was the total spend accumulated from the last campaign?",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "sum of spend",
+                "operations": [
+                    "filter for last campaign"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "Which campaign in particular are you referring to?"
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "The 'Spring into Summer' campaign.",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "sum of spend",
+                "operations": [
+                    "filter for campaign name is 'Spring into Summer'"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 2,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Only show rows where the value is greater than 100.",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "all",
+                "operations": [
+                    "filter for value > 100"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "Ok, here you go."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Now, sort by the date.",
+                "intent": "query",
+                "dact": [
+                    "filter",
+                    "sort"
+                ],
+                "aggregation": "all",
+                "operations": [
+                    "filter for value > 100",
+                    "sort by date"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 3,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "What was the average CVR for last month?",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "average CVR",
+                "operations": [
+                    "filter for last month"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "The average conversion rate was 4.53%."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "and the CTR?",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "average CTR",
+                "operations": [
+                    "filter for last month"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 4,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Does the first name column have any missing values?",
+                "intent": "query",
+                "dact": [
+                    "describe"
+                ],
+                "aggregation": "top 7",
+                "operations": []
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "No, it does not have any missing values."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Ok, merge it with the last name column to create a new one called 'full name'",
+                "intent": "manipulate",
+                "dact": [
+                    "clean"
+                ],
+                "aggregation": "",
+                "operations": []
+            }
+        ]
+    },
+    {
+        "convo_id": 5,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Can you show me the total sales by product category so far this year?",
+                "intent": "query",
+                "dact": [
+                    "filter",
+                    "group"
+                ],
+                "aggregation": "sum of sales",
+                "operations": [
+                    "filter for this year",
+                    "group by product category"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "No problem, here is total sales."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "How does that compare to the previous year?",
+                "intent": "query",
+                "dact": [
+                    "filter",
+                    "group"
+                ],
+                "aggregation": "sum of sales",
+                "operations": [
+                    "filter for previous year",
+                    "group by product category"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 6,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Show me a graph of the average order value for each state please.",
+                "intent": "report",
+                "dact": [
+                    "visualize"
+                ],
+                "aggregation": "average order value",
+                "operations": [
+                    "group by state"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "Ok, you got it."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Can you also show me the total number of orders for each state?",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "count of orders",
+                "operations": [
+                    "group by state"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 7,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Which email campaign had the highest open rate last week?",
+                "intent": "query",
+                "dact": [
+                    "filter",
+                    "group",
+                    "sort"
+                ],
+                "aggregation": "max campaign",
+                "operations": [
+                    "filter for last week",
+                    "filter by email",
+                    "group by campaign",
+                    "sort by open rate"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "The 'Welcome' campaign had the highest open rate."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "What was the next highest?",
+                "intent": "query",
+                "dact": [
+                    "filter",
+                    "group",
+                    "sort"
+                ],
+                "aggregation": "top 2 campaigns",
+                "operations": [
+                    "filter for last week",
+                    "filter by email",
+                    "group by campaign",
+                    "sort by open rate"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 8,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "List the top 3 salespeople by total number of sales.",
+                "intent": "query",
+                "dact": [
+                    "group",
+                    "sort"
+                ],
+                "aggregation": "top 3 salespeople",
+                "operations": [
+                    "group by salespeople",
+                    "sort by total sales"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "The top 3 salespeople are Connor, Jesslyn and Hector. See the table for more details."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Who are the top 3 salespeople by total sales amount, like the dollar value.",
+                "intent": "query",
+                "dact": [
+                    "group",
+                    "sort"
+                ],
+                "aggregation": "top 3 salespeople",
+                "operations": [
+                    "group by salespeople",
+                    "sort by sales volume"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 9,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Delete columns with duplicate headers.",
+                "intent": "manipulate",
+                "dact": [
+                    "delete"
+                ],
+                "aggregation": "",
+                "operations": []
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "Alright, I've removed the columns with duplicate headers."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Now, can you check for any duplicate rows and remove them as well?",
+                "intent": "manipulate",
+                "dact": [
+                    "delete"
+                ],
+                "aggregation": "",
+                "operations": []
+            }
+        ]
+    },
+    {
+        "convo_id": 10,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "What is the distribution of employee performance ratings by job role?",
+                "intent": "query",
+                "dact": [
+                    "filter",
+                    "group"
+                ],
+                "aggregation": "all performance ratings",
+                "operations": [
+                    "group by job role",
+                    "sort by performance ratings"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "Here's a breakdown of employee performance."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Can you also show me the average rating for each role?",
+                "intent": "manipulate",
+                "dact": [
+                    "plan"
+                ],
+                "aggregation": "average rating",
+                "operations": [
+                    "group by job_role",
+                    "pivot by rating"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 11,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "How many new customers were acquired through social media campaigns?",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "count of customers",
+                "operations": [
+                    "filter campaign type is social media",
+                    "filter customer only appears once"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "We acquired 1,207 new customers through social media campaigns."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "What percentage does that represent of our total new customers?",
+                "intent": "manipulate",
+                "dact": [
+                    "plan"
+                ],
+                "aggregation": "percentage of new customers",
+                "operations": [
+                    "filter customer only appears once",
+                    "divide value by total new customers"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 12,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Erase all columns with a standard deviation of zero",
+                "intent": "manipulate",
+                "dact": [
+                    "delete"
+                ],
+                "aggregation": "",
+                "operations": []
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "I've removed all those columns."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Great, now can you normalize the remaining columns?",
+                "intent": "manipulate",
+                "dact": [
+                    "clean"
+                ],
+                "aggregation": "",
+                "operations": []
+            }
+        ]
+    },
+    {
+        "convo_id": 13,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "What is the average time spent on the website for each traffic source in the past 3 months?",
+                "intent": "query",
+                "dact": [
+                    "filter",
+                    "group"
+                ],
+                "aggregation": "average time spent",
+                "operations": [
+                    "filter for past 3 months",
+                    "group by traffic source"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "The average time spent was 14.3 minutes coming from Google, 12.7 minutes coming from Facebook and 8.8 minutes from TikTok. See the table for more details."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Can you also show me the bounce rate for each traffic source?",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "average bounce rate",
+                "operations": [
+                    "filter for last campaign",
+                    "group by traffic_source"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 14,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "What are the top 10 revenue-generating categories in each region?",
+                "intent": "query",
+                "dact": [
+                    "group",
+                    "sort"
+                ],
+                "aggregation": "top 10 categories",
+                "operations": [
+                    "group by region",
+                    "sort by revenue"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "The top categories are pets, electronics, and clothing. See the table for more details."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Can you also show me the total revenue for each of these categories?",
+                "intent": "query",
+                "dact": [
+                    "filter",
+                    "group",
+                    "sort"
+                ],
+                "aggregation": "sum of revenue",
+                "operations": [
+                    "filter for top categories",
+                    "group by category",
+                    "sort by revenue"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 15,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "What are our top-selling products?",
+                "intent": "query",
+                "dact": [
+                    "group",
+                    "sort"
+                ],
+                "aggregation": "top 7 products",
+                "operations": [
+                    "group by product",
+                    "sort by sales"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "Do you want top-selling products by quantity or revenue?"
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "By quantity.",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "top 7 products",
+                "operations": [
+                    "group by product",
+                    "sort by quantity"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 16,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "What was the best performing campaign in terms of ROI last fiscal year?",
+                "intent": "query",
+                "dact": [
+                    "filter",
+                    "group",
+                    "sort"
+                ],
+                "aggregation": "max campaign",
+                "operations": [
+                    "filter for last fiscal year",
+                    "group by campaign",
+                    "sort by ROI"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "Can you please tell me when the fiscal year starts and ends?"
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "It starts in April and ends in March.",
+                "intent": "query",
+                "dact": [
+                    "filter",
+                    "group",
+                    "sort"
+                ],
+                "aggregation": "max campaign",
+                "operations": [
+                    "filter for month start in April last year",
+                    "filter for month end in March this year",
+                    "group by campaign",
+                    "sort by ROI"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 17,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Visualize the performance of our paid search by plotting CPC, CTR, and CVR",
+                "intent": "report",
+                "dact": [
+                    "visualize"
+                ],
+                "aggregation": "all CPC, CTR, and CVR",
+                "operations": [
+                    "filter by paid search",
+                    "group by channel"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "Alright, I've created a graph with CPC, CTR, and CVR for our paid search performance."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Can you also add the total number of conversions to the graph?",
+                "intent": "report",
+                "dact": [
+                    "visualize"
+                ],
+                "aggregation": "sum of conversions",
+                "operations": [
+                    "filter by paid search",
+                    "group by channel"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 18,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Which channel has the highest conversion rate in the past few days?",
+                "intent": "query",
+                "dact": [
+                    "filter",
+                    "group",
+                    "sort"
+                ],
+                "aggregation": "max channel",
+                "operations": [
+                    "filter for past few days",
+                    "group by channel",
+                    "sort by conversion rate"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "Based on the data, the channel with the highest conversion rate is Instagram."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Interesting. What about the conversion rate for our email campaigns?",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "average conversion_rate",
+                "operations": [
+                    "filter channel is email",
+                    "filter for past few days"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 19,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Can you display the average sales per region, sorted by highest to lowest?",
+                "intent": "query",
+                "dact": [
+                    "group",
+                    "sort"
+                ],
+                "aggregation": "average sales",
+                "operations": [
+                    "group by region",
+                    "sort by sales descending"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "Sure, here you go."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Thanks, can you also show the total sales for each region?",
+                "intent": "manipulate",
+                "dact": [
+                    "plan"
+                ],
+                "aggregation": "sum of sales",
+                "operations": [
+                    "group by region",
+                    "sort by sales descending"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 20,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Which marketing channel has the highest CVR rate lately.",
+                "intent": "query",
+                "dact": [
+                    "group",
+                    "sort"
+                ],
+                "aggregation": "max channel",
+                "operations": [
+                    "filter for recent time period",
+                    "group by channel",
+                    "sort by conversion rate"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "Recently, the highest CVR rate is from the email marketing channel."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Can you create a chart comparing the CVR rates of all our marketing channels?",
+                "intent": "report",
+                "dact": [
+                    "visualize"
+                ],
+                "aggregation": "all channels",
+                "operations": [
+                    "filter for recent time period",
+                    "group by channel",
+                    "sort by conversion rate"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 21,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Top selling brand",
+                "intent": "query",
+                "dact": [
+                    "group",
+                    "sort"
+                ],
+                "aggregation": "max brand",
+                "operations": [
+                    "group by brand",
+                    "sort by sales"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "The top-selling brand is Adidas with a total of 3,139 units sold."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "What about the second and third top-selling brands?",
+                "intent": "query",
+                "dact": [
+                    "group",
+                    "sort"
+                ],
+                "aggregation": "top 3 brands",
+                "operations": [
+                    "group by brand",
+                    "sort by sales"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 22,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "How much money did we make in February?",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "sum of revenue",
+                "operations": [
+                    "filter month is February"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "In February, we made a total of $12,450."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "And how does that compare to January's revenue?",
+                "intent": "query",
+                "dact": [
+                    "filter",
+                    "group"
+                ],
+                "aggregation": "sum of revenue",
+                "operations": [
+                    "filter month is January and February",
+                    "group by month"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 23,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Show the data as a pie chart or donut chart",
+                "intent": "report",
+                "dact": [
+                    "visualize"
+                ],
+                "aggregation": "all",
+                "operations": []
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "Sure, I've created a pie chart to visualize the data. Let me know if you prefer a donut chart instead."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "The pie chart is fine, thanks.",
+                "intent": "converse",
+                "dact": [
+                    "chat"
+                ],
+                "aggregation": "",
+                "operations": []
+            }
+        ]
+    },
+    {
+        "convo_id": 24,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "What is the average order value for the last month?",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "average order value",
+                "operations": [
+                    "filter for last month"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "The average order value for the last month was $78.45."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Can you compare it to the average order value from the previous month?",
+                "intent": "query",
+                "dact": [
+                    "filter",
+                    "group"
+                ],
+                "aggregation": "average order value",
+                "operations": [
+                    "filter for last two months",
+                    "group by month"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 25,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Day of the week with highest ROI?",
+                "intent": "query",
+                "dact": [
+                    "group",
+                    "sort"
+                ],
+                "aggregation": "max day",
+                "operations": [
+                    "group by day of the week",
+                    "sort by ROI"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "Thursday had the highest ROI."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "What about the day with the lowest ROI?",
+                "intent": "query",
+                "dact": [
+                    "group",
+                    "sort"
+                ],
+                "aggregation": "min day",
+                "operations": [
+                    "group by day of the week",
+                    "sort by ROI"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 26,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "What is the retention rate?",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "average retention rate",
+                "operations": []
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "The retention rate is currently at 67%."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Is that better than the previous quarter?",
+                "intent": "query",
+                "dact": [
+                    "filter",
+                    "group"
+                ],
+                "aggregation": "average retention rate",
+                "operations": [
+                    "filter for previous quarter"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 27,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "All the spaces should be replaced with a underscore",
+                "intent": "manipulate",
+                "dact": [
+                    "clean"
+                ],
+                "aggregation": "",
+                "operations": []
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "I've replaced all the spaces with underscores in the relevant columns."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Great, now can you also remove any special characters from the data?",
+                "intent": "manipulate",
+                "dact": [
+                    "delete"
+                ],
+                "aggregation": "",
+                "operations": []
+            }
+        ]
+    },
+    {
+        "convo_id": 28,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "how much did we sell in july",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "sum of sales",
+                "operations": [
+                    "filter month is July"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "In July, we sold a total of 4,508 units."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "and what was the total revenue for that month?",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "sum of revenue",
+                "operations": [
+                    "filter month is July"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 29,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Create a bar chart comparing the average deal size for each day of the week.",
+                "intent": "report",
+                "dact": [
+                    "visualize"
+                ],
+                "aggregation": "average deal size",
+                "operations": [
+                    "group by day of the week"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "No problem, how does that look?"
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Can you also add a trendline to see if there's any pattern?",
+                "intent": "report",
+                "dact": [
+                    "style"
+                ],
+                "aggregation": "average deal size",
+                "operations": [
+                    "group by day of the week"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 30,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Can you rank the students by their test scores in ascending order?",
+                "intent": "query",
+                "dact": [
+                    "sort"
+                ],
+                "aggregation": "all students",
+                "operations": [
+                    "sort by test scores"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "Sure, I've sorted the students."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Can you also calculate the median and average test scores?",
+                "intent": "manipulate",
+                "dact": [
+                    "plan"
+                ],
+                "aggregation": "median test_score, average test_score",
+                "operations": [
+                    "sort by test scores"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 31,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "How many new customers did we acquire in February?",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "count of new customers",
+                "operations": [
+                    "filter month is February"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "Last month, we acquired 3,514 new customers."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Is that more or less than January?",
+                "intent": "query",
+                "dact": [
+                    "filter",
+                    "group"
+                ],
+                "aggregation": "count of new customers",
+                "operations": [
+                    "filter month is January and February",
+                    "group by month"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 32,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Can you change all channels tagged ga as Google Analytics?",
+                "intent": "manipulate",
+                "dact": [
+                    "clean"
+                ],
+                "aggregation": "all channels",
+                "operations": []
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "Sure, I've updated all instances of \"ga\" to \"Google Analytics.\""
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Great, now can you filter the data to only show Google Analytics entries?",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "all channels",
+                "operations": [
+                    "filter for channel is Google Analytics"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 33,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Display the records of sources with a CPC over $0.50",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "all sources",
+                "operations": [
+                    "filter for CPC > 0.50"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "I've filtered the data to show those sources. Check the table for details."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Can you also show the average CTR for these sources?",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "average CTR",
+                "operations": [
+                    "filter for CPC > 0.50"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 34,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "How does that compare to the previous month?",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "all",
+                "operations": [
+                    "filter for month is previous month"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "It's a 3% increase."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "That's good progress. Let's keep monitoring it closely.",
+                "intent": "converse",
+                "dact": [
+                    "chat"
+                ],
+                "aggregation": "",
+                "operations": []
+            }
+        ]
+    },
+    {
+        "convo_id": 35,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "What are the top 10 most visited pages on our website?",
+                "intent": "query",
+                "dact": [
+                    "group",
+                    "sort"
+                ],
+                "aggregation": "top 10 pages",
+                "operations": [
+                    "group by page",
+                    "sort by visits"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "I've pulled up the data. Here they are."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Can you also show me the average time spent on each page?",
+                "intent": "query",
+                "dact": [
+                    "group",
+                    "sort"
+                ],
+                "aggregation": "average time spent",
+                "operations": [
+                    "group by page",
+                    "sort by visits"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 36,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "How many shoes were sold on May 9th?",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "count of shoes",
+                "operations": [
+                    "filter date is May 9th"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "We sold 320 pairs of shoes."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Can you also tell me the total revenue generated on that day?",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "sum of revenue",
+                "operations": [
+                    "filter date is May 9th"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 37,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "All lowercase letters",
+                "intent": "manipulate",
+                "dact": [
+                    "clean"
+                ],
+                "aggregation": "",
+                "operations": []
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "I've converted all the text to lowercase."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Great, now remove any special characters as well.",
+                "intent": "manipulate",
+                "dact": [
+                    "delete"
+                ],
+                "aggregation": "",
+                "operations": []
+            }
+        ]
+    },
+    {
+        "convo_id": 38,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "What were the top 3 categories of expenses for the past six months?",
+                "intent": "query",
+                "dact": [
+                    "filter",
+                    "group",
+                    "sort"
+                ],
+                "aggregation": "top 3 categories",
+                "operations": [
+                    "filter for past six months",
+                    "group by category",
+                    "sort by expenses"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "The top 3 categories were employee salaries, marketing costs, and office rent. See the table for more details."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Can you break down the marketing costs for each category for me?",
+                "intent": "query",
+                "dact": [
+                    "filter",
+                    "group",
+                    "sort"
+                ],
+                "aggregation": "all channels",
+                "operations": [
+                    "filter for past six months",
+                    "filter cost type is marketing",
+                    "group by category",
+                    "sort by expenses"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 39,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Please list the top 10 cities with the highest number of active users, grouped by country, for the past year.",
+                "intent": "query",
+                "dact": [
+                    "filter",
+                    "group",
+                    "sort"
+                ],
+                "aggregation": "top 10 cities",
+                "operations": [
+                    "filter for past year",
+                    "group by country",
+                    "sort by active users"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "Here are the top 10 cities for the past year."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Can you also provide the percentage of active users in each city compared to the total number of users in their respective countries?",
+                "intent": "manipulate",
+                "dact": [
+                    "plan"
+                ],
+                "aggregation": "percentage of active users",
+                "operations": [
+                    "filter for past year",
+                    "group by city and country",
+                    "sort by active users"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 40,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "How many customers have made more than 3 purchases in the past year?",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "count of customers",
+                "operations": [
+                    "filter for past year",
+                    "filter for purchases > 3"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "There were 1,215 customers who made more than 3 purchases."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Can you segment them by their preferred product category?",
+                "intent": "query",
+                "dact": [
+                    "filter",
+                    "group"
+                ],
+                "aggregation": "count of customers",
+                "operations": [
+                    "filter for past year",
+                    "filter for purchases > 3",
+                    "group by preferred product category"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 41,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Hide rows containing duplicate data",
+                "intent": "manipulate",
+                "dact": [
+                    "delete"
+                ],
+                "aggregation": "all",
+                "operations": [
+                    "filter for unique rows"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "I've hidden the rows with duplicate data."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Great, now can you sort the remaining data by date?",
+                "intent": "query",
+                "dact": [
+                    "sort"
+                ],
+                "aggregation": "all",
+                "operations": [
+                    "sort by date"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 42,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Erase all rows where the email address is invalid.",
+                "intent": "manipulate",
+                "dact": [
+                    "delete"
+                ],
+                "aggregation": "all rows",
+                "operations": [
+                    "filter for invalid email addresses"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "What do you mean by invalid?"
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Any email address that doesn't contain the @ symbol.",
+                "intent": "manipulate",
+                "dact": [
+                    "delete"
+                ],
+                "aggregation": "all rows",
+                "operations": [
+                    "filter @ symbol not in email address"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 43,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "How many subscriptions were sold yesterday?",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "count of subscriptions",
+                "operations": [
+                    "filter for yesterday"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "We sold 328 of subscriptions yesterday."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Can you break that down by subscription type?",
+                "intent": "query",
+                "dact": [
+                    "filter",
+                    "group"
+                ],
+                "aggregation": "count of subscriptions",
+                "operations": [
+                    "filter for last campaign",
+                    "group by subscription type"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 44,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Develop a bar chart graphing LTV across different customer segments",
+                "intent": "report",
+                "dact": [
+                    "visualize"
+                ],
+                "aggregation": "average LTV",
+                "operations": [
+                    "group by customer segment"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "Here you go. Let me know if you need any adjustments."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Looks good. Can you also add the max LTV for all customers as a reference?",
+                "intent": "report",
+                "dact": [
+                    "style"
+                ],
+                "aggregation": "max LTV",
+                "operations": []
+            }
+        ]
+    },
+    {
+        "convo_id": 45,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Delete rows where the profit is negative",
+                "intent": "manipulate",
+                "dact": [
+                    "delete"
+                ],
+                "aggregation": "all",
+                "operations": [
+                    "filter for profit < 0"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "I've removed the rows."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Great, now can you calculate the total profit for the remaining rows?",
+                "intent": "query",
+                "dact": [
+                    "sort"
+                ],
+                "aggregation": "sum of profit",
+                "operations": [
+                    "sort by profit"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 46,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Construct a bubble chart to represent the market share of each competitor in our industry.",
+                "intent": "report",
+                "dact": [
+                    "visualize"
+                ],
+                "aggregation": "all competitors",
+                "operations": [
+                    "group by competitor",
+                    "sort by market share"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "No problem, how does this look?"
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Can you also add their year-over-year growth rate to the chart?",
+                "intent": "report",
+                "dact": [
+                    "visualize"
+                ],
+                "aggregation": "average growth rate",
+                "operations": [
+                    "group by competitor"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 47,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "What is the conversion rate for users who visited our website through social media campaigns in the past 45 days?",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "average conversion rate",
+                "operations": [
+                    "filter for past 45 days",
+                    "filter by social media campaigns"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "The conversion rate is 8.5%."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "How does that compare to the conversion rate from other traffic sources?",
+                "intent": "query",
+                "dact": [
+                    "filter",
+                    "group",
+                    "sort"
+                ],
+                "aggregation": "average conversion rate",
+                "operations": [
+                    "filter for past 45 days",
+                    "group by source",
+                    "sort by conversion rate"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 48,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "What about in June?",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "all students",
+                "operations": [
+                    "filter for June"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "In June, we had 4,212 students enter."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Can you also provide the total revenue?",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "sum of revenue",
+                "operations": [
+                    "filter month is June"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 49,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "What is the monthly growth rate of our user base, segmented by their subscription plan?",
+                "intent": "query",
+                "dact": [
+                    "group"
+                ],
+                "aggregation": "average growth rate",
+                "operations": [
+                    "group by month",
+                    "group by subscription plan"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "The growth rates are 8.1% for free users, 4.5% for basic, and 3.2% for premium."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Can you also show me the overall growth rate for all plans combined?",
+                "intent": "query",
+                "dact": [
+                    "group"
+                ],
+                "aggregation": "average growth_rate",
+                "operations": [
+                    "group by month"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 50,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Show me the cities with the highest ROAS.",
+                "intent": "query",
+                "dact": [
+                    "group",
+                    "sort"
+                ],
+                "aggregation": "top 7 cities",
+                "operations": [
+                    "group by city",
+                    "sort by ROAS"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "Cinicinnati, Portland, and Seattle have the highest ROAS. See the table for more details."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Can you also rank them by their click-through rate?",
+                "intent": "query",
+                "dact": [
+                    "sort"
+                ],
+                "aggregation": "top 7 cities",
+                "operations": [
+                    "group by city",
+                    "sort by ROAS",
+                    "sort by click-through rate"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 51,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "What were our profits in June?",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "sum of profits",
+                "operations": [
+                    "filter month is June"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "In June, our profits were $45,200."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "How does that compare to May?",
+                "intent": "query",
+                "dact": [
+                    "filter",
+                    "group"
+                ],
+                "aggregation": "sum of profits",
+                "operations": [
+                    "filter month is May and June",
+                    "group by month"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 52,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Remove columns that have more than 50% missing values",
+                "intent": "manipulate",
+                "dact": [
+                    "delete"
+                ],
+                "aggregation": "",
+                "operations": []
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "I've removed the columns with more than 50% missing values."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Fill in the remaining missing values with the mean or mode?",
+                "intent": "manipulate",
+                "dact": [
+                    "clean"
+                ],
+                "aggregation": "",
+                "operations": []
+            }
+        ]
+    },
+    {
+        "convo_id": 53,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "All the the dashes should be underscores.",
+                "intent": "manipulate",
+                "dact": [
+                    "clean"
+                ],
+                "aggregation": "",
+                "operations": []
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "I've replaced all the dashes with underscores now."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "also remove spaces",
+                "intent": "manipulate",
+                "dact": [
+                    "delete"
+                ],
+                "aggregation": "",
+                "operations": []
+            }
+        ]
+    },
+    {
+        "convo_id": 54,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "How many support tickets were resolved within 24 hours last week?",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "count of support tickets",
+                "operations": [
+                    "filter for last week",
+                    "filter for resolution_time <= 24 hours"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "Last week, 128 support tickets were resolved within 24 hours."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "What percentage of all support tickets does that represent?",
+                "intent": "query",
+                "dact": [
+                    "filter",
+                    "group"
+                ],
+                "aggregation": "percentile of resolved tickets",
+                "operations": [
+                    "filter for last week",
+                    "filter for resolution_time <= 24 hours",
+                    "group by status"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 55,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Develop a scatter plot to visualize the correlation between customer satisfaction scores and repeat purchases.",
+                "intent": "report",
+                "dact": [
+                    "visualize"
+                ],
+                "aggregation": "all",
+                "operations": []
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "I've created the scatter plot. It shows a positive correlation between satisfaction scores and repeat purchases."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Great, can you add a trendline to the chart?",
+                "intent": "report",
+                "dact": [
+                    "style"
+                ],
+                "aggregation": "all",
+                "operations": []
+            }
+        ]
+    },
+    {
+        "convo_id": 56,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "customer LTV from PPC",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "average LTV",
+                "operations": [
+                    "filter by PPC"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "The average customer LTV from PPC is $120."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "what about from organic search",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "average LTV",
+                "operations": [
+                    "filter for organic search"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 57,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "What is the retention rate from that campaign?",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "average retention rate",
+                "operations": [
+                    "filter for campaign"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "The retention rate for that campaign is 67%."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "How does it compare to our average retention rate?",
+                "intent": "query",
+                "dact": [
+                    "plan"
+                ],
+                "aggregation": "average retention_rate",
+                "operations": []
+            }
+        ]
+    },
+    {
+        "convo_id": 58,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Can you draw that for me",
+                "intent": "report",
+                "dact": [
+                    "visualize"
+                ],
+                "aggregation": "",
+                "operations": []
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "Sure, what specifically would you like me to draw?"
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "I'd like a pie chart showing the percentage of sales from each product category.",
+                "intent": "report",
+                "dact": [
+                    "visualize"
+                ],
+                "aggregation": "all product categories",
+                "operations": [
+                    "group by product category",
+                    "sort by sales percentage"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 59,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "List the top-performing display campaigns by total conversion broken down by referrer.",
+                "intent": "query",
+                "dact": [
+                    "group",
+                    "sort"
+                ],
+                "aggregation": "top 7 campaigns",
+                "operations": [
+                    "group by referrer",
+                    "sort by total conversion"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "Here's the list of top-performing campaigns."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "What were their conversion rates?",
+                "intent": "query",
+                "dact": [
+                    "filter",
+                    "group",
+                    "sort"
+                ],
+                "aggregation": "average conversion rate",
+                "operations": [
+                    "filter for last campaign",
+                    "group by referrer",
+                    "sort by conversion rate"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 60,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Delete rows where the profit is negative",
+                "intent": "manipulate",
+                "dact": [
+                    "delete"
+                ],
+                "aggregation": "all rows",
+                "operations": [
+                    "filter for profit < 0"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "I've removed the rows with negative profit. The table is now updated."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Can you also highlight the rows with a profit margin below 10%?",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "all orders",
+                "operations": [
+                    "filter for profit margin < 10%"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 61,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Which salesperson had the highest average deal size in the past year?",
+                "intent": "query",
+                "dact": [
+                    "filter",
+                    "group",
+                    "sort"
+                ],
+                "aggregation": "max salesperson",
+                "operations": [
+                    "filter for past year",
+                    "group by salesperson",
+                    "sort by average deal size"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "The salesperson with the highest average deal size was Kevin Yang."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "How much higher was his deal size compared to everyone else?",
+                "intent": "query",
+                "dact": [
+                    "filter",
+                    "group",
+                    "sort"
+                ],
+                "aggregation": "average deal size",
+                "operations": [
+                    "filter for past year",
+                    "group by salesperson",
+                    "sort by average deal size"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 62,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "lowercase please",
+                "intent": "manipulate",
+                "dact": [
+                    "clean"
+                ],
+                "aggregation": "",
+                "operations": []
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "I've converted all the text to lowercase in the relevant columns."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "no trailing spaces",
+                "intent": "manipulate",
+                "dact": [
+                    "clean"
+                ],
+                "aggregation": "",
+                "operations": []
+            }
+        ]
+    },
+    {
+        "convo_id": 63,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "AOV for the last month?",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "average order value",
+                "operations": [
+                    "filter for last month"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "The average order value for last month was $78.45."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "What about the current month?",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "average order value",
+                "operations": [
+                    "filter for current month"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 64,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "How many employees have been with the company for more than 5 years?",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "count of employees",
+                "operations": [
+                    "filter for hire_date > 5 years"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "We have 37 employees."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "More than 10 years?",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "count of employees",
+                "operations": [
+                    "filter for hire_date > 10 years"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 65,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Can you infer what goes into the blanks?",
+                "intent": "manipulate",
+                "dact": [
+                    "clean"
+                ],
+                "aggregation": "",
+                "operations": []
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "I can try to fill in the blanks using mean, mode or magic."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Nice. Let's go with magic.",
+                "intent": "manipulate",
+                "dact": [
+                    "clean"
+                ],
+                "aggregation": "",
+                "operations": []
+            }
+        ]
+    },
+    {
+        "convo_id": 66,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Add the word \"social\" to the start of each row",
+                "intent": "manipulate",
+                "dact": [
+                    "clean"
+                ],
+                "aggregation": "",
+                "operations": []
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "I've added \"social\" to the start of each row. The spreadsheet is now updated."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Can you also capitalize the first letter of each word in the rows?",
+                "intent": "manipulate",
+                "dact": [
+                    "clean"
+                ],
+                "aggregation": "",
+                "operations": []
+            }
+        ]
+    },
+    {
+        "convo_id": 67,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Display the records of employees with a salary over $50,000.",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "all employees",
+                "operations": [
+                    "filter for salary > 50000"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "I've filtered the records to show employees with a salary over $50,000. Check the table now."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Sort by job title",
+                "intent": "query",
+                "dact": [
+                    "filter",
+                    "sort"
+                ],
+                "aggregation": "all employees",
+                "operations": [
+                    "filter for salary > 50000",
+                    "sort by job title"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 68,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "What is the percentage of orders that were returned or cancelled in the last 6 months?",
+                "intent": "query",
+                "dact": [
+                    "filter",
+                    "group"
+                ],
+                "aggregation": "percentile of orders",
+                "operations": [
+                    "filter for last 6 months",
+                    "filter status is returned or cancelled",
+                    "group by order status"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "The percentage of returned or cancelled orders is 12.3%."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Can you break that down by month and show me the trend?",
+                "intent": "report",
+                "dact": [
+                    "visualize"
+                ],
+                "aggregation": "percentile of orders",
+                "operations": [
+                    "filter for last 6 months",
+                    "filter status is returned or cancelled",
+                    "group by order status",
+                    "group by month"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 69,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Show a chart comparing the average time to conversion for different marketing channels.",
+                "intent": "report",
+                "dact": [
+                    "visualize"
+                ],
+                "aggregation": "average time to conversion",
+                "operations": [
+                    "group by marketing channel"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "Here's the chart comparing the conversion times for each channel."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Which channel has the shortest conversion time?",
+                "intent": "query",
+                "dact": [
+                    "group",
+                    "sort"
+                ],
+                "aggregation": "min channel",
+                "operations": [
+                    "group by marketing channel",
+                    "sort by time_to_conversion"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 70,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Can you rank the students by their test scores in ascending order?",
+                "intent": "query",
+                "dact": [
+                    "sort"
+                ],
+                "aggregation": "all students",
+                "operations": [
+                    "sort by test scores ascending"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "I've sorted the students by their test scores. Check the updated table."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Can you also add a column for their percentile rank?",
+                "intent": "manipulate",
+                "dact": [
+                    "plan"
+                ],
+                "aggregation": "percentile of test_score",
+                "operations": [
+                    "sort by test scores ascending"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 71,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "who are US clients with spend > $1K",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "all clients",
+                "operations": [
+                    "filter by US",
+                    "filter for spend > 1000"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "I've filtered the list for US clients with over $1000 spent. Check the updated sheet."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "wjat's their total spend?",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "sum of total_spend",
+                "operations": [
+                    "filter for US clients",
+                    "filter for spend > 1000"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 72,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Filter the data to only include properties with a lot size larger than 1 acre.",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "all properties",
+                "operations": [
+                    "filter for lot size > 1 acre"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "Done. Check the updated table."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Can you also show the average property value for these results?",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "average property value",
+                "operations": [
+                    "filter for lot size > 1 acre"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 73,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "ok, let's remove those",
+                "intent": "manipulate",
+                "dact": [
+                    "delete"
+                ],
+                "aggregation": "",
+                "operations": []
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "How does that look?"
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Looks good, and can we shorten the remaining ones?",
+                "intent": "manipulate",
+                "dact": [
+                    "clean"
+                ],
+                "aggregation": "",
+                "operations": []
+            }
+        ]
+    },
+    {
+        "convo_id": 74,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Convert all the dates to a consistent format (MM/DD/YYYY)",
+                "intent": "manipulate",
+                "dact": [
+                    "clean"
+                ],
+                "aggregation": "all dates",
+                "operations": []
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "No problem."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Now sort in ascending order",
+                "intent": "query",
+                "dact": [
+                    "sort"
+                ],
+                "aggregation": "all dates",
+                "operations": [
+                    "sort date by ascending order"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 75,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Sort by size",
+                "intent": "query",
+                "dact": [
+                    "sort"
+                ],
+                "aggregation": "all",
+                "operations": [
+                    "sort by size"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "I've sorted the data by size. Please take a look."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Price too",
+                "intent": "query",
+                "dact": [
+                    "sort"
+                ],
+                "aggregation": "all",
+                "operations": [
+                    "sort by size",
+                    "sort by price"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 76,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Create a bar graph comparing the monthly revenue of each store location",
+                "intent": "report",
+                "dact": [
+                    "visualize"
+                ],
+                "aggregation": "sum of revenue",
+                "operations": [
+                    "group by month",
+                    "group by store location"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "I've created the bar graph. Take a look."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Can you also add the average monthly revenue for all locations as a reference?",
+                "intent": "manipulate",
+                "dact": [
+                    "clean"
+                ],
+                "aggregation": "average revenue",
+                "operations": [
+                    "group by month",
+                    "group by store location"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 77,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Did we make a profit in January?",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "sum of profit",
+                "operations": [
+                    "filter month is January"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "Yes, we made a profit in January. The net income was $12,450."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "December?",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "sum of profit",
+                "operations": [
+                    "filter month is December",
+                    "filter year is previous year"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 78,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Can you make it camelcase?",
+                "intent": "manipulate",
+                "dact": [
+                    "clean"
+                ],
+                "aggregation": "",
+                "operations": []
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "I've converted the text."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Also remove underscores",
+                "intent": "manipulate",
+                "dact": [
+                    "clean"
+                ],
+                "aggregation": "",
+                "operations": []
+            }
+        ]
+    },
+    {
+        "convo_id": 79,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Replace Facebook with just FB",
+                "intent": "manipulate",
+                "dact": [
+                    "clean"
+                ],
+                "aggregation": "",
+                "operations": []
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "I've replaced all instances of \"Facebook\" with \"FB.\""
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Same for Instagram and IG.",
+                "intent": "manipulate",
+                "dact": [
+                    "clean"
+                ],
+                "aggregation": "",
+                "operations": []
+            }
+        ]
+    },
+    {
+        "convo_id": 80,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "and what about the last week",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "carry",
+                "operations": [
+                    "filter for last week"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "Last week's data shows a 5% increase in sales compared to the previous week."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Not bad, what was our best-performing region last week?",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "max region",
+                "operations": [
+                    "filter for last week",
+                    "group by region",
+                    "sort by sales_amount"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 81,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "List the top 5 products by sales volume in each category.",
+                "intent": "query",
+                "dact": [
+                    "group",
+                    "sort"
+                ],
+                "aggregation": "top 5 products",
+                "operations": [
+                    "group by category",
+                    "sort by sales volume"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "I've listed the top 5 products for each category in a new sheet."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Could you also add their respective sales revenue?",
+                "intent": "query",
+                "dact": [
+                    "group",
+                    "sort"
+                ],
+                "aggregation": "average revenue",
+                "operations": [
+                    "group by category",
+                    "sort by sales volume"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 82,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Can you show me the average monthly expenses for each department, sorted by the highest to the lowest, for the last quarter?",
+                "intent": "query",
+                "dact": [
+                    "filter",
+                    "group",
+                    "sort"
+                ],
+                "aggregation": "average monthly expenses",
+                "operations": [
+                    "filter for last quarter",
+                    "group by department",
+                    "sort by expenses"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "I've sorted the table."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Add a col for the percentage change compared to the current quarter?",
+                "intent": "manipulate",
+                "dact": [
+                    "plan"
+                ],
+                "aggregation": "percentile change",
+                "operations": [
+                    "filter for last quarter and current quarter",
+                    "group by department",
+                    "group by quarter",
+                    "sort by expenses"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 83,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "How about for last month?",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "all",
+                "operations": [
+                    "filter for last month"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "Last month's total sales were $43,197.22"
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "What was the best selling product category then?",
+                "intent": "query",
+                "dact": [
+                    "filter",
+                    "group",
+                    "sort"
+                ],
+                "aggregation": "max category",
+                "operations": [
+                    "filter for last month",
+                    "group by category",
+                    "sort by total_sales"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 84,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Can you create a histogram showing the distribution of customer lifetime value?",
+                "intent": "report",
+                "dact": [
+                    "visualize"
+                ],
+                "aggregation": "all customers",
+                "operations": [
+                    "group by lifetime value",
+                    "sort by frequency"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "Here's the histogram for customer lifetime value distribution."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "What's the most common LTV range?",
+                "intent": "report",
+                "dact": [
+                    "filter",
+                    "visualize"
+                ],
+                "aggregation": "mode of LTV range",
+                "operations": [
+                    "group by lifetime value"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 85,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Render a stacked bar chart to compare the market share of different brands in each region.",
+                "intent": "report",
+                "dact": [
+                    "visualize"
+                ],
+                "aggregation": "all brands",
+                "operations": [
+                    "group by region",
+                    "group by brand"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "I've created the stacked bar chart comparing market shares of different brands across regions."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Great, which brand has the highest market share in the North region?",
+                "intent": "query",
+                "dact": [
+                    "filter",
+                    "group",
+                    "sort"
+                ],
+                "aggregation": "max brand",
+                "operations": [
+                    "filter for North region",
+                    "group by brand",
+                    "sort by market_share"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 86,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Can you list all the transactions that occurred on the 15th of last month?",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "all transactions",
+                "operations": [
+                    "filter date is 15th",
+                    "filter for last month"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "I've filtered the transactions for the 15th of last month in a new sheet."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "What was the total revenue generated on that day?",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "sum of revenue",
+                "operations": [
+                    "filter date is 15th",
+                    "filter for last month"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 87,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Erase the rows with missing values",
+                "intent": "manipulate",
+                "dact": [
+                    "delete"
+                ],
+                "aggregation": "all",
+                "operations": [
+                    "filter for missing values"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "I've removed the rows with missing values. Check the updated sheet."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "How many rows were removed?",
+                "intent": "chat",
+                "dact": [
+                    "inquire"
+                ],
+                "aggregation": "count of rows",
+                "operations": [
+                    "filter for missing values"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 88,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Can you create a bar chart comparing the average time spent on our website by different age groups?",
+                "intent": "report",
+                "dact": [
+                    "visualize"
+                ],
+                "aggregation": "average time spent",
+                "operations": [
+                    "group by age group"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "I've created the bar chart."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "And total time spent?",
+                "intent": "report",
+                "dact": [
+                    "visualize"
+                ],
+                "aggregation": "sum time spent",
+                "operations": [
+                    "group by age group"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 89,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Develop a histogram of the distribution of order values to identify common price points and potential outliers.a new figure",
+                "intent": "report",
+                "dact": [
+                    "visualize"
+                ],
+                "aggregation": "all order values",
+                "operations": [
+                    "sort by order values",
+                    "group by price points"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "I've created the histogram for order values distribution."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Can you highlight the potential outliers on the chart?",
+                "intent": "report",
+                "dact": [
+                    "analyze",
+                    "visualize"
+                ],
+                "aggregation": "all outliers",
+                "operations": [
+                    "filter for potential outliers"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 90,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "List the suppliers with the highest delivery rate in each country.",
+                "intent": "query",
+                "dact": [
+                    "group",
+                    "sort"
+                ],
+                "aggregation": "max supplier",
+                "operations": [
+                    "group by country",
+                    "sort by delivery rate"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "I've listed the top suppliers by delivery rate for each country in the table."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "What are their avg delivery times?",
+                "intent": "query",
+                "dact": [
+                    "plan"
+                ],
+                "aggregation": "average delivery time",
+                "operations": [
+                    "group by country",
+                    "sort by delivery rate"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 91,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Which marketing channel has the highest conversion rate?",
+                "intent": "query",
+                "dact": [
+                    "group",
+                    "sort"
+                ],
+                "aggregation": "max channel",
+                "operations": [
+                    "group by channel",
+                    "sort by conversion rate"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "The highest conversion rate is from email marketing at 12%."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "What about social media and PPC?",
+                "intent": "query",
+                "dact": [
+                    "filter",
+                    "group",
+                    "sort"
+                ],
+                "aggregation": "average conversion rate",
+                "operations": [
+                    "filter for social media and PPC",
+                    "group by channel",
+                    "sort by conversion rate"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 92,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "what is the conversion rate",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "average conversion rate",
+                "operations": []
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "The conversion rate is 4.2%."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "How does it compare to last month's rate?",
+                "intent": "query",
+                "dact": [
+                    "filter",
+                    "group"
+                ],
+                "aggregation": "average conversion rate",
+                "operations": [
+                    "filter for last month and current month",
+                    "group by month"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 93,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Visualize the correlation between customer satisfaction and repeat purchases",
+                "intent": "report",
+                "dact": [
+                    "visualize"
+                ],
+                "aggregation": "all",
+                "operations": []
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "Sure, I've created a scatter plot to show the correlation."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Can you add a regression line to see the strength of the relationship?",
+                "intent": "report",
+                "dact": [
+                    "visualize"
+                ],
+                "aggregation": "all",
+                "operations": []
+            }
+        ]
+    },
+    {
+        "convo_id": 94,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Can you create a scatter plot comparing the average order value and the number of orders per customer segment?",
+                "intent": "report",
+                "dact": [
+                    "visualize"
+                ],
+                "aggregation": "average order value",
+                "operations": [
+                    "group by customer segment",
+                    "sort by number of orders"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "Scatter plot created. It shows different trends for each customer segment."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Add trendline for each segment",
+                "intent": "report",
+                "dact": [
+                    "style"
+                ],
+                "aggregation": "average order value",
+                "operations": [
+                    "group by customer_segment",
+                    "sort by number of orders"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 95,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "channel with best CVR in previous week",
+                "intent": "query",
+                "dact": [
+                    "filter",
+                    "group",
+                    "sort"
+                ],
+                "aggregation": "max channel",
+                "operations": [
+                    "filter for previous week",
+                    "group by channel",
+                    "sort by CVR"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "The channel with the highest CVR last week was email marketing."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "How does it compare to the previous month's CVR?",
+                "intent": "query",
+                "dact": [
+                    "filter",
+                    "group",
+                    "sort"
+                ],
+                "aggregation": "max channel",
+                "operations": [
+                    "filter for previous month",
+                    "group by channel",
+                    "sort by CVR"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 96,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Can you create a word cloud of the most frequently used words in our customers' product reviews?",
+                "intent": "report",
+                "dact": [
+                    "visualize"
+                ],
+                "aggregation": "count of words",
+                "operations": [
+                    "group by words",
+                    "sort by frequency"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "Sure, I've created the word cloud based on customer reviews."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Thanks, are there any common themes or trends we should focus on?",
+                "intent": "query",
+                "dact": [
+                    "analyze"
+                ],
+                "aggregation": "count of words",
+                "operations": [
+                    "group by words",
+                    "sort by frequency"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 97,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Produce a stacked bar chart to represent the proportion of new and returning customers for each quarter.",
+                "intent": "report",
+                "dact": [
+                    "visualize"
+                ],
+                "aggregation": "all customers",
+                "operations": [
+                    "group by quarter",
+                    "group by customer type"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "I've created the stacked bar chart. It's in the charts tab."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Actually a regular bar chart is fine",
+                "intent": "report",
+                "dact": [
+                    "visualize"
+                ],
+                "aggregation": "all customers",
+                "operations": [
+                    "group by quarter",
+                    "group by customer type"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 98,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Which marketing channel has the highest conversion rate in the past month?",
+                "intent": "query",
+                "dact": [
+                    "filter",
+                    "group",
+                    "sort"
+                ],
+                "aggregation": "max channel",
+                "operations": [
+                    "filter for past month",
+                    "group by channel",
+                    "sort by conversion rate"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "The highest conversion rate was from email marketing at 12.3%."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Was that better than before?",
+                "intent": "query",
+                "dact": [
+                    "filter",
+                    "sort"
+                ],
+                "aggregation": "max channel",
+                "operations": [
+                    "filter for previous month",
+                    "filter channel is email",
+                    "sort by conversion rate"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 99,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "How many subscribers have opened our newsletter more than twice in the last 3 months?",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "count of subscribers",
+                "operations": [
+                    "filter for last 3 months",
+                    "filter for opens > 2"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "There were 1,243 subscribers who opened the newsletter more than twice."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "What's the total number of subscribers in the last 3 months?",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "count of subscribers",
+                "operations": [
+                    "filter for last 3 months"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 100,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Plot how many pairs were sold in March, broken down by shoe brand.",
+                "intent": "report",
+                "dact": [
+                    "visualize"
+                ],
+                "aggregation": "count of pairs",
+                "operations": [
+                    "filter month is March",
+                    "group by shoe brand"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "I've created a chart showing the number of pairs sold per brand in March. Check it out."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Can you also add the total sales revenue for each brand?",
+                "intent": "report",
+                "dact": [
+                    "visualize"
+                ],
+                "aggregation": "sum of sales revenue",
+                "operations": [
+                    "filter month is March",
+                    "group by brand"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 101,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Remove all rows with duplicate email addresses",
+                "intent": "manipulate",
+                "dact": [
+                    "delete"
+                ],
+                "aggregation": "all rows",
+                "operations": [
+                    "filter for unique email addresses"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "I've deleted the duplicate rows."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Thanks, now can you show me the top 10 most engaged users based on open rate?",
+                "intent": "query",
+                "dact": [
+                    "sort"
+                ],
+                "aggregation": "top 10 users",
+                "operations": [
+                    "sort by open rate"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 102,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "What were the total expenses for the marketing department in Q1?",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "sum of expenses",
+                "operations": [
+                    "filter for Q1",
+                    "filter department is marketing"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "The total expenses for the marketing department in Q1 were $41,186."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Is that better than Q4?",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "sum of expenses",
+                "operations": [
+                    "filter for Q4",
+                    "filter for previous year",
+                    "filter department is marketing"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 103,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Can you display the orders with a total value of more than $500?",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "all orders",
+                "operations": [
+                    "filter for total value > 500"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "I've filtered the orders with a total value of over $500. Here they are."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "AOV?",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "average order value",
+                "operations": [
+                    "filter for total value > 500"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 104,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Find all projects with a completion rate of 80% or more.",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "all projects",
+                "operations": [
+                    "filter for completion rate >= 80%"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "Here's the list of projects with 80% or more completion rate."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Can you sort them by deadline date?",
+                "intent": "query",
+                "dact": [
+                    "filter",
+                    "sort"
+                ],
+                "aggregation": "all projects",
+                "operations": [
+                    "filter for completion rate >= 80%",
+                    "sort by deadline date"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 105,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Let's get rid of that column",
+                "intent": "manipulate",
+                "dact": [
+                    "delete"
+                ],
+                "aggregation": "",
+                "operations": []
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "I've removed the column you mentioned. The spreadsheet is now updated."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Thanks, can you add a column for the net revenue?",
+                "intent": "manipulate",
+                "dact": [
+                    "plan"
+                ],
+                "aggregation": "",
+                "operations": []
+            }
+        ]
+    },
+    {
+        "convo_id": 106,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Can you group our customers by their age group and sort them by their average purchase amount?",
+                "intent": "query",
+                "dact": [
+                    "group",
+                    "sort"
+                ],
+                "aggregation": "average purchase amount",
+                "operations": [
+                    "group by age group",
+                    "sort by average purchase amount"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "I've grouped the customers and sorted them by average purchase amount. Check the table."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "What's the best age group?",
+                "intent": "query",
+                "dact": [
+                    "group",
+                    "sort"
+                ],
+                "aggregation": "max age group",
+                "operations": [
+                    "group by age group",
+                    "sort by average purchase amount"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 107,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "How does that compare to last quarter?",
+                "intent": "query",
+                "dact": [
+                    "filter",
+                    "group"
+                ],
+                "aggregation": "all",
+                "operations": [
+                    "filter for last quarter",
+                    "group by quarter"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "Last quarter's total sales were $39,500."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "What contributed to the increase this quarter?",
+                "intent": "query",
+                "dact": [
+                    "analyze"
+                ],
+                "aggregation": "all",
+                "operations": [
+                    "filter for this quarter",
+                    "group by factors contributing to increase"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 108,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Did we make a profit in October?",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "sum of profit",
+                "operations": [
+                    "filter month is October"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "Yes, we made a profit of $12,005 in October."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "what about September",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "sum of profit",
+                "operations": [
+                    "filter for September"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 109,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Add a column to calculate the profit on each sale",
+                "intent": "manipulate",
+                "dact": [
+                    "plan"
+                ],
+                "aggregation": "sum of profit",
+                "operations": []
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "I've added a column for profit calculation. It's in the updated sheet."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Calculate the total profit for each salesperson as well.",
+                "intent": "manipulate",
+                "dact": [
+                    "clean"
+                ],
+                "aggregation": "sum of profit",
+                "operations": [
+                    "group by salesperson"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 110,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Can you graph the number of shoes sold per month for year to date?",
+                "intent": "report",
+                "dact": [
+                    "visualize"
+                ],
+                "aggregation": "count of shoes sold",
+                "operations": [
+                    "filter for year to date",
+                    "group by month"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "I've made the graph for shoes sold per month this year."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Which month had the highest sales?",
+                "intent": "query",
+                "dact": [
+                    "group",
+                    "sort"
+                ],
+                "aggregation": "max month",
+                "operations": [
+                    "filter for year to date",
+                    "group by month",
+                    "sort by sales"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 111,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Can you provide the total revenue per sales region, grouped by product type, for the last year?",
+                "intent": "query",
+                "dact": [
+                    "filter",
+                    "group"
+                ],
+                "aggregation": "sum of revenue",
+                "operations": [
+                    "filter for last year",
+                    "group by sales region",
+                    "group by product type"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "Sure, I've created a pivot table showing the total revenue per sales region, grouped by product type for the last year."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "What's the highest revenue generating region and product type combo?",
+                "intent": "query",
+                "dact": [
+                    "filter",
+                    "group",
+                    "sort"
+                ],
+                "aggregation": "max revenue",
+                "operations": [
+                    "filter for last campaign",
+                    "group by sales region and product type",
+                    "sort by total revenue"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 112,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Let's hide that column",
+                "intent": "manipulate",
+                "dact": [
+                    "delete"
+                ],
+                "aggregation": "",
+                "operations": []
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "I've hidden the column as requested."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Can you also filter out rows with missing data?",
+                "intent": "manipulate",
+                "dact": [
+                    "delete"
+                ],
+                "aggregation": "",
+                "operations": [
+                    "filter for empty rows"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 113,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Let's add a month column based on the date",
+                "intent": "manipulate",
+                "dact": [
+                    "plan"
+                ],
+                "aggregation": "all",
+                "operations": []
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "I've added the month column."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Thanks, now can you group the data by month and calculate the total revenue for each?",
+                "intent": "manipulate",
+                "dact": [
+                    "clean"
+                ],
+                "aggregation": "sum of revenue",
+                "operations": [
+                    "group by month"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 114,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Create a funnel chart to visualize the different stages of the customer journey",
+                "intent": "report",
+                "dact": [
+                    "visualize"
+                ],
+                "aggregation": "all stages",
+                "operations": []
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "I've created the funnel chart. Take a look."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Can you add the conversion rates between each stage?",
+                "intent": "query",
+                "dact": [
+                    "plan"
+                ],
+                "aggregation": "all stages",
+                "operations": []
+            }
+        ]
+    },
+    {
+        "convo_id": 115,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "What is LTV for people from SEM channels?",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "average LTV",
+                "operations": [
+                    "filter channel is SEM"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "The LTV for people from SEM channels is $450."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "How does it compare to social media channels?",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "None",
+                "operations": [
+                    "filter channel is social media"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 116,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "I'd like to see that as a figure",
+                "intent": "report",
+                "dact": [
+                    "visualize"
+                ],
+                "aggregation": "all",
+                "operations": []
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "Here you go, how does that look?"
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Actually, I wanted it by month, not by day.",
+                "intent": "report",
+                "dact": [
+                    "visualize"
+                ],
+                "aggregation": "all",
+                "operations": [
+                    "group by month"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 117,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Give me a figure for that",
+                "intent": "report",
+                "dact": [
+                    "visualize"
+                ],
+                "aggregation": "all",
+                "operations": []
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "No problem, here you go. I showed it with a pie chart."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Thanks, and what's the percentage change compared to last month?",
+                "intent": "report",
+                "dact": [
+                    "visualize"
+                ],
+                "aggregation": "percentile change",
+                "operations": [
+                    "filter for last month"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 118,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Build a stacked bar chart showing the proportion of new and returning customers over time.",
+                "intent": "report",
+                "dact": [
+                    "visualize"
+                ],
+                "aggregation": "all customers",
+                "operations": [
+                    "group by time",
+                    "group by customer type"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "I've created the stacked bar chart for you."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Can you add dots to each bar representing the median?",
+                "intent": "report",
+                "dact": [
+                    "style"
+                ],
+                "aggregation": "median of spend",
+                "operations": [
+                    "group by time",
+                    "group by customer type"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 119,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "what's the CVR on just checkout",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "average CVR",
+                "operations": [
+                    "filter page is checkout"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "The CVR for checkout is 4.5%."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "How does it compare to last month?",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "average CVR",
+                "operations": [
+                    "filter page is checkout",
+                    "filter for last month"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 120,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Are there any missing values in the age column?",
+                "intent": "query",
+                "dact": [
+                    "describe"
+                ],
+                "aggregation": "count of missing values",
+                "operations": [
+                    "filter for missing age values"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "Yes, there are some missing values in the age column."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Can you fill them with the average age?",
+                "intent": "manipulate",
+                "dact": [
+                    "clean"
+                ],
+                "aggregation": "average age",
+                "operations": []
+            }
+        ]
+    },
+    {
+        "convo_id": 121,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Show me the top 5 fastest growing companies in the dataset.",
+                "intent": "query",
+                "dact": [
+                    "sort"
+                ],
+                "aggregation": "top 5 companies",
+                "operations": [
+                    "sort by growth rate"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "Here are the top 5 fastest growing companies."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Can you also provide their growth percentages?",
+                "intent": "query",
+                "dact": [
+                    "filter",
+                    "sort"
+                ],
+                "aggregation": "top 5 companies",
+                "operations": [
+                    "filter for growth rate",
+                    "sort by growth_rate"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 122,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Which supplier has the highest order fulfillment rate, sorted by industry, in the past six months?",
+                "intent": "query",
+                "dact": [
+                    "filter",
+                    "group",
+                    "sort"
+                ],
+                "aggregation": "max supplier",
+                "operations": [
+                    "filter for past six months",
+                    "group by industry",
+                    "sort by order fulfillment rate"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "\"TechMaster\" has the highest fulfillment rate in the electronics industry. Check the sorted list I added."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "What about the clothing industry?",
+                "intent": "query",
+                "dact": [
+                    "plan"
+                ],
+                "aggregation": "max supplier",
+                "operations": [
+                    "filter for past six months",
+                    "filter industry is clothing",
+                    "group by industry",
+                    "sort by order fulfillment rate"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 123,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Change all the spaces to dashes",
+                "intent": "manipulate",
+                "dact": [
+                    "clean"
+                ],
+                "aggregation": "",
+                "operations": []
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "I've replaced all the spaces with dashes in the relevant columns."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Thanks, now can you remove any numbers from the data?",
+                "intent": "manipulate",
+                "dact": [
+                    "delete"
+                ],
+                "aggregation": "",
+                "operations": []
+            }
+        ]
+    },
+    {
+        "convo_id": 124,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "What is the AOV in the past month, broken down by channel?",
+                "intent": "query",
+                "dact": [
+                    "filter",
+                    "group"
+                ],
+                "aggregation": "average order value",
+                "operations": [
+                    "filter for past month",
+                    "group by channel"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "Here's the AOV by channel for the past month. Check the table."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Thanks, can you also provide the conversion rate for each channel?",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "average conversion rate",
+                "operations": [
+                    "filter for past month",
+                    "group by channel"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 125,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "What's the conversion rate for our website?",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "average conversion rate",
+                "operations": [
+                    "filter for website"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "The website's conversion rate is 3.7%."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "How has it changed over the past three months?",
+                "intent": "query",
+                "dact": [
+                    "plan"
+                ],
+                "aggregation": "average conversion_rate",
+                "operations": [
+                    "filter for website",
+                    "filter for past three months",
+                    "group by month"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 126,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Display the transactions that occurred between January 1st and January 31st.",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "all transactions",
+                "operations": [
+                    "filter for January 1st to January 31st"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "I've filtered the transactions for January 1st to 31st. Check the updated sheet."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Can you sort them by transaction amount in descending order?",
+                "intent": "query",
+                "dact": [
+                    "sort"
+                ],
+                "aggregation": "all transactions",
+                "operations": [
+                    "filter for January 1st to January 31st",
+                    "sort by transaction amount descending"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 127,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "What marketing channel has the highest conversion rate in the past week?",
+                "intent": "query",
+                "dact": [
+                    "filter",
+                    "group",
+                    "sort"
+                ],
+                "aggregation": "max channel",
+                "operations": [
+                    "filter for past week",
+                    "group by channel",
+                    "sort by conversion rate"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "The highest conversion rate in the past week is from our Facebook campaigns."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Can you provide a breakdown of the conversions by age group for Facebook?",
+                "intent": "query",
+                "dact": [
+                    "filter",
+                    "group",
+                    "sort"
+                ],
+                "aggregation": "count of conversions",
+                "operations": [
+                    "filter for past week",
+                    "filter channel is Facebook",
+                    "group by age group",
+                    "sort by conversation rate"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 128,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Average LTV of referral programs",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "average LTV",
+                "operations": [
+                    "filter channel is referral"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "The average LTV for referral programs is $120."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Can you compare that to the LTV of other acquisition channels?",
+                "intent": "query",
+                "dact": [
+                    "group"
+                ],
+                "aggregation": "average LTV",
+                "operations": [
+                    "group by channel"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 129,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "How many support tickets were submitted by premium users in the last 30 days?",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "count of support tickets",
+                "operations": [
+                    "filter user premium status is true",
+                    "filter for last 30 days"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "In the last 30 days, premium users submitted 782 support tickets."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Can you compare that to the number of tickets from non-premium users?",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "count of support_tickets",
+                "operations": [
+                    "filter user premium status is false",
+                    "filter for last 30 days"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 130,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "segment by customer last name please",
+                "intent": "query",
+                "dact": [
+                    "group"
+                ],
+                "aggregation": "all",
+                "operations": [
+                    "group by last name"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "I've segmented the data by customer last name."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Can you also show the total revenue for each segment?",
+                "intent": "query",
+                "dact": [
+                    "group"
+                ],
+                "aggregation": "sum of revenue",
+                "operations": [
+                    "group by last name"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 131,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "How many employees have a salary between $50,000 and $80,000?",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "count of employees",
+                "operations": [
+                    "filter for salary between 50000 and 80000"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "There are 1,250 employees in that salary range."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "What's the average salary for that group?",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "average salary",
+                "operations": [
+                    "filter for salary between 50000 and 80000"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 132,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Eliminate the cells with errors",
+                "intent": "manipulate",
+                "dact": [
+                    "delete"
+                ],
+                "aggregation": "all",
+                "operations": [
+                    "filter for errors"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "I've removed all cells containing errors."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Great, now can you find any duplicates?",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "all duplicates",
+                "operations": [
+                    "filter for duplicates"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 133,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "What was our win rate in March?",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "average of win rate",
+                "operations": [
+                    "filter month is March"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "March win rate was about 32.8%."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "How does that compare to February?",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "average of win rate",
+                "operations": [
+                    "filter month is February"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 134,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Remove rows where the total sales are below $1000.",
+                "intent": "manipulate",
+                "dact": [
+                    "delete"
+                ],
+                "aggregation": "all",
+                "operations": [
+                    "filter for total sales > 1000"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "I've removed those rows. The sheet is now updated."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "What's the new total sales figure?",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "sum of total_sales",
+                "operations": []
+            }
+        ]
+    },
+    {
+        "convo_id": 135,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Exclude all columns that have the word \"deprecated\" in the header",
+                "intent": "manipulate",
+                "dact": [
+                    "delete"
+                ],
+                "aggregation": "",
+                "operations": [
+                    "filter for 'deprecated' in the header"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "I've removed all columns with \"deprecated\" in the header."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Can you also filter out rows with incomplete data?",
+                "intent": "manipulate",
+                "dact": [
+                    "delete"
+                ],
+                "aggregation": "",
+                "operations": []
+            }
+        ]
+    },
+    {
+        "convo_id": 136,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Which marketing campaign had the highest ROI in the past",
+                "intent": "query",
+                "dact": [
+                    "group",
+                    "sort"
+                ],
+                "aggregation": "max campaign",
+                "operations": [
+                    "group by campaign",
+                    "sort by ROI"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "The \"Summer Savings\" campaign had the highest ROI at 8.5."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "What was the total revenue generated by that campaign?",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "sum of revenue",
+                "operations": [
+                    "fiter campaign is \"Summer Savings\""
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 137,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "What is the average CVR for SEM people.",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "average CVR",
+                "operations": [
+                    "filter channel is SEM"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "The average CVR for SEM is 2.5%."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "How does that compare to other marketing channels?",
+                "intent": "query",
+                "dact": [
+                    "plan"
+                ],
+                "aggregation": "average CVR",
+                "operations": [
+                    "group by channel"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 138,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "How many products have a rating of 4 stars or higher and were sold in the past week?",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "count of products",
+                "operations": [
+                    "filter for rating >= 4",
+                    "filter for past week"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "There were 37 products with a 4-star rating or higher sold last week."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Can you show me the top 5 best-selling products among them?",
+                "intent": "query",
+                "dact": [
+                    "filter",
+                    "group",
+                    "sort"
+                ],
+                "aggregation": "top 5 products",
+                "operations": [
+                    "filter for rating >= 4",
+                    "filter for past week",
+                    "group by product_id",
+                    "sort by sales"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 139,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Develop a line chart showing the growth of our customer base over time, with separate lines for each customer acquisition channel.",
+                "intent": "report",
+                "dact": [
+                    "visualize"
+                ],
+                "aggregation": "all customers",
+                "operations": [
+                    "group by acquisition channel",
+                    "sort by time"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "I've created the line chart with separate lines for each acquisition channel. Take a look."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Great, can we also see the monthly growth rate?",
+                "intent": "report",
+                "dact": [
+                    "visualize"
+                ],
+                "aggregation": "average growth rate",
+                "operations": [
+                    "group by month",
+                    "group by acquisition_channel",
+                    "sort by time"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 140,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "How does that compare to the last month?",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "average click-through rate",
+                "operations": [
+                    "filter for last month"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "The average click-through rate this month is 12% higher than last month."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Good to know. Can you identify the main factors that contributed to this increase?",
+                "intent": "query",
+                "dact": [
+                    "analyze"
+                ],
+                "aggregation": "all factors",
+                "operations": [
+                    "filter for current month",
+                    "filter for last month"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 141,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Can you display the average customer satisfaction score for each support agent, sorted from highest to lowest?",
+                "intent": "query",
+                "dact": [
+                    "group",
+                    "sort"
+                ],
+                "aggregation": "average satisfaction score",
+                "operations": [
+                    "group by support agent",
+                    "sort by satisfaction score"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "I've sorted the average customer satisfaction scores for each agent. Check it out."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Who has the top 3 scores?",
+                "intent": "query",
+                "dact": [
+                    "group",
+                    "sort"
+                ],
+                "aggregation": "top 3 agents",
+                "operations": [
+                    "group by support agent",
+                    "sort by satisfaction_score"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 142,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "How many customers greater than five purchases?",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "count of customers",
+                "operations": [
+                    "filter for purchases > 5"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "There are 890 customers with more than five purchases."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "What's the average purchase value for these customers?",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "average purchase value",
+                "operations": [
+                    "filter for purchases > 5"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 143,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Which state has the highest median income in each region?",
+                "intent": "query",
+                "dact": [
+                    "group",
+                    "sort"
+                ],
+                "aggregation": "max state",
+                "operations": [
+                    "group by region",
+                    "sort by median income"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "I've highlighted the states in the spreadsheet."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Great, can you add column to show the median income for each?",
+                "intent": "manipulate",
+                "dact": [
+                    "plan"
+                ],
+                "aggregation": "median income",
+                "operations": [
+                    "group by region"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 144,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Can we display the data as a stacked bar chart?",
+                "intent": "report",
+                "dact": [
+                    "visualize"
+                ],
+                "aggregation": "all",
+                "operations": []
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "Sure, I've created a stacked bar chart for you."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Great, can you also add the percentage labels on the chart?",
+                "intent": "report",
+                "dact": [
+                    "style"
+                ],
+                "aggregation": "all",
+                "operations": []
+            }
+        ]
+    },
+    {
+        "convo_id": 145,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "I don't want to see that one anymore, let's get rid of it.",
+                "intent": "manipulate",
+                "dact": [
+                    "delete"
+                ],
+                "aggregation": "",
+                "operations": []
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "Okay, I've removed it."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Thanks, can we add a new metric instead?",
+                "intent": "manipulate",
+                "dact": [
+                    "plan"
+                ],
+                "aggregation": "",
+                "operations": []
+            }
+        ]
+    },
+    {
+        "convo_id": 146,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Generate a pie chart displaying the percentage of sales by product category.",
+                "intent": "report",
+                "dact": [
+                    "visualize"
+                ],
+                "aggregation": "all categories",
+                "operations": [
+                    "group by product category",
+                    "sort by sales"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "I created the pie chart showing sales percentages for each product category."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Add the total sales amount for each category too.",
+                "intent": "manipulate",
+                "dact": [
+                    "clean"
+                ],
+                "aggregation": "sum of total_sales",
+                "operations": [
+                    "group by product_category"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 147,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "What are the top 3 cities with the most website visits, grouped by country, in the past 30 days?",
+                "intent": "query",
+                "dact": [
+                    "filter",
+                    "group",
+                    "sort"
+                ],
+                "aggregation": "top 3 cities",
+                "operations": [
+                    "filter for past 30 days",
+                    "group by country",
+                    "sort by website visits"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "I've listed the top 3 cities per country based on website visits in the last 30 days."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Thanks, can you also show the total number of visits for each country?",
+                "intent": "query",
+                "dact": [
+                    "filter",
+                    "group",
+                    "sort"
+                ],
+                "aggregation": "sum of visit count",
+                "operations": [
+                    "filter for past 30 days",
+                    "group by country",
+                    "sort by website visits"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 148,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Which salesperson had the highest number of deals closed in each quarter?",
+                "intent": "query",
+                "dact": [
+                    "group",
+                    "sort"
+                ],
+                "aggregation": "max salesperson",
+                "operations": [
+                    "group by quarter",
+                    "sort by deals closed"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "I've identified the top salesperson for each quarter."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "What were their total sales amounts?",
+                "intent": "query",
+                "dact": [
+                    "group",
+                    "sort"
+                ],
+                "aggregation": "sum of sales amount",
+                "operations": [
+                    "group by salesperson_id",
+                    "group by quarter",
+                    "sort by deals closed"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 149,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Replace all instances of \"N/A\" with 0 in the size column",
+                "intent": "manipulate",
+                "dact": [
+                    "clean"
+                ],
+                "aggregation": "all",
+                "operations": []
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "Done, all \"N/A\" values are now 0."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Great, now can you calculate the average size?",
+                "intent": "manipulate",
+                "dact": [
+                    "plan"
+                ],
+                "aggregation": "average of size",
+                "operations": []
+            }
+        ]
+    },
+    {
+        "convo_id": 150,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Can you tell me the number of shoes sold in 2022",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "count of shoes",
+                "operations": [
+                    "filter year is 2022"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "In 2022, we sold 15,230 pairs of shoes."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "What's the breakdown by brand?",
+                "intent": "query",
+                "dact": [
+                    "filter",
+                    "group"
+                ],
+                "aggregation": "count of shoes",
+                "operations": [
+                    "filter year is 2022",
+                    "group by brand"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 151,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Can you remove all the columns with missing values",
+                "intent": "manipulate",
+                "dact": [
+                    "delete"
+                ],
+                "aggregation": "all",
+                "operations": []
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "Here you go, done."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Great, now let's sort the rows by total sales.",
+                "intent": "query",
+                "dact": [
+                    "sort"
+                ],
+                "aggregation": "sum of sales",
+                "operations": [
+                    "sort by total sales"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 152,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "What columns are in the purchases table?",
+                "intent": "query",
+                "dact": [
+                    "describe"
+                ],
+                "aggregation": "top 7",
+                "operations": []
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "The purchases table has the following columns: customer_id, product_id, quantity, price, total_sales, and date."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Can you also show me the data types for each column?",
+                "intent": "query",
+                "dact": [
+                    "describe"
+                ],
+                "aggregation": "top 7",
+                "operations": []
+            }
+        ]
+    },
+    {
+        "convo_id": 153,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "For the bar chart, can we show May in yellow?",
+                "intent": "report",
+                "dact": [
+                    "style"
+                ],
+                "aggregation": "",
+                "operations": [
+                    "filter month is May"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "Sure, here you go. How does this look?"
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Looks good. Can you also add the data labels?",
+                "intent": "report",
+                "dact": [
+                    "style"
+                ],
+                "aggregation": "",
+                "operations": []
+            }
+        ]
+    },
+    {
+        "convo_id": 154,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "What is the average revenue per customer?",
+                "intent": "query",
+                "dact": [
+                    "group"
+                ],
+                "aggregation": "average revenue",
+                "operations": [
+                    "group by customer"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "The average revenue per customer is $63.37."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "How does that compare to last year?",
+                "intent": "query",
+                "dact": [
+                    "filter",
+                    "group"
+                ],
+                "aggregation": "average revenue",
+                "operations": [
+                    "filter for last year",
+                    "group by customer"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 155,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "What is the total revenue generated from our email marketing campaign?",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "sum of revenue",
+                "operations": [
+                    "filter by email marketing"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "The total revenue from the email campaign is $12,450."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Can you show me the conversion rate for that campaign?",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "average conversion rate",
+                "operations": [
+                    "filter by email marketing"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 156,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Show me the list of students who scored above 90% in the test.",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "all students",
+                "operations": [
+                    "filter for score > 90%"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "I've filtered the list of students who scored above 90%. Check the new sheet."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "How many students scored between 80% and 90%?",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "count of students",
+                "operations": [
+                    "filter for scores between 80% and 90%"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 157,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "How many new customers did we acquire last month?",
+                "intent": "query",
+                "dact": [
+                    "filter"
+                ],
+                "aggregation": "count of new customers",
+                "operations": [
+                    "filter for last month"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "We acquired 1,339 new customers last month."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Hmm, that seems a bit low.",
+                "intent": "converse",
+                "dact": [
+                    "delete",
+                    "chat"
+                ],
+                "aggregation": "",
+                "operations": []
+            }
+        ]
+    },
+    {
+        "convo_id": 158,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Can you drop all rows that are empty?",
+                "intent": "manipulate",
+                "dact": [
+                    "delete"
+                ],
+                "aggregation": "",
+                "operations": []
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "I've removed all empty rows."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "Thanks, how many rows are left over?",
+                "intent": "query",
+                "dact": [
+                    "describe"
+                ],
+                "aggregation": "",
+                "operations": []
+            }
+        ]
+    },
+    {
+        "convo_id": 159,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "Show me the most expensive first",
+                "intent": "query",
+                "dact": [
+                    "sort"
+                ],
+                "aggregation": "max price",
+                "operations": [
+                    "sort by price"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "I sorted the data by price, highest first."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "How many items are above $500?",
+                "intent": "query",
+                "dact": [
+                    "filter",
+                    "sort"
+                ],
+                "aggregation": "count of items",
+                "operations": [
+                    "filter for price > 500",
+                    "sort by price"
+                ]
+            }
+        ]
+    },
+    {
+        "convo_id": 160,
+        "turns": [
+            {
+                "utt_id": 1,
+                "speaker": "User",
+                "text": "What's the top region for sales?",
+                "intent": "query",
+                "dact": [
+                    "group",
+                    "sort"
+                ],
+                "aggregation": "max region",
+                "operations": [
+                    "group by region",
+                    "sort by sales"
+                ]
+            },
+            {
+                "utt_id": 2,
+                "speaker": "Agent",
+                "text": "The Northeast region had the most sales."
+            },
+            {
+                "utt_id": 3,
+                "speaker": "User",
+                "text": "What is the gap between the Northeast and the next highest?",
+                "intent": "query",
+                "dact": [
+                    "group",
+                    "sort"
+                ],
+                "aggregation": "top 2 regions",
+                "operations": [
+                    "group by region",
+                    "sort by sales"
+                ]
+            }
+        ]
+    }
+]

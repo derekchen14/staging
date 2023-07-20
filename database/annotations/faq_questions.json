@@ -1,0 +1,234 @@
+[
+  {
+    "text": "Can you help me improve my marketing campaigns?",
+    "answers": [1, 2]
+  },
+  {
+    "text": "Can you help me increase my sales?",
+    "answers": [1, 3]
+  },
+  {
+    "text": "What can you do?",
+    "answers": [1, 2, 5]
+  },
+  {
+    "text": "Are you a human?",
+    "answers": [5]
+  },
+  {
+    "text": "Can you help me with that?",
+    "answers": [1, 2]
+  },
+  {
+    "text": "What does Soleda do?",
+    "answers": [5, 1, 2]
+  },
+  {
+    "text": "What does Kalli do?",
+    "answers": [5, 1]
+  },
+  {
+    "text": "What does Dana do?",
+    "answers": [5, 1]
+  },
+  {
+    "text": "What is Soleda?",
+    "answers": [5, 6, 1]
+  },
+  {
+    "text": "What is Kalli?",
+    "answers": [5, 6, 1]
+  },
+  {
+    "text": "Who are you?",
+    "answers": [1]
+  },
+  {
+    "text": "What is the company's background?",
+    "answers": [5, 6, 7]
+  },
+  {
+    "text": "What is the company's history?",
+    "answers": [5, 6, 7]
+  },
+  {
+    "text": "Who made you?",
+    "answers": [5, 6, 7]
+  },
+  {
+    "text": "What is your purpose?",
+    "answers": [5, 6, 7]
+  },
+  {
+    "text": "How do you handle large sets of data?",
+    "answers": [8, 12]
+  },
+  {
+    "text": "How do you ensure the accuracy of your analyses?",
+    "answers": [9]
+  },
+  {
+    "text": "How do you handle missing or incomplete data?",
+    "answers": [10]
+  },
+  {
+    "text": "What can you do with data analysis?",
+    "answers": [1, 2, 3]
+  },
+  {
+    "text": "How can you help with marketing analytics?",
+    "answers": [1, 2]
+  },
+  {
+    "text": "What kind of data analysis techniques do you use?",
+    "answers": [1, 2]
+  },
+  {
+    "text": "Can you support our marketing team with insights from data?",
+    "answers": [1, 2]
+  },
+  {
+    "text": "What kind of marketing data can you work with?",
+    "answers": [1, 2, 12]
+  },
+  {
+    "text": "Can you help with customer segmentation and targeting?",
+    "answers": [1, 2]
+  },
+  {
+    "text": "Are you able to perform sentiment analysis on social media data?",
+    "answers": [1, 2]
+  },
+  {
+    "text": "Do you have experience in analyzing sales data?",
+    "answers": [1, 2, 3]
+  },
+  {
+    "text": "Can you help with predicting customer behavior based on data?",
+    "answers": [1, 2]
+  },
+  {
+    "text": "Are you able to identify trends and patterns in marketing data?",
+    "answers": [1, 2]
+  },
+  {
+    "text": "Can you assist in the creation of marketing dashboards and reports?",
+    "answers": [1, 2, 14]
+  },
+  {
+    "text": "How do you handle large datasets for marketing analysis?",
+    "answers": [8, 12]
+  },
+  {
+    "text": "Can you help us optimize our marketing campaigns using data analysis?",
+    "answers": [1, 2]
+  },
+  {
+    "text": "Are you capable of carrying out A/B testing analysis?",
+    "answers": [1, 2]
+  },
+  {
+    "text": "Can you analyze the effectiveness of different marketing channels?",
+    "answers": [1, 2]
+  },
+  {
+    "text": "Are you able to perform return on investment (ROI) analysis for marketing campaigns?",
+    "answers": [1, 2]
+  },
+  {
+    "text": "Can you help us identify opportunities for customer acquisition and retention using data analysis?",
+    "answers": [1, 2]
+  },
+  {
+    "text": "Do you have experience with analyzing web analytics data?",
+    "answers": [1, 2]
+  },
+  {
+    "text": "Can you assist in creating data-driven marketing strategies?",
+    "answers": [1, 2]
+  },
+  {
+    "text": "Are you able to provide recommendations based on your data analysis findings?",
+    "answers": [1, 2]
+  },
+  {
+    "text": "Can you explain the process of data cleaning and preparation?",
+    "answers": [1, 10]
+  },
+  {
+    "text": "What types of data visualization do you provide?",
+    "answers": [1, 14]
+  },
+  {
+    "text": "How do you maintain data privacy and security?",
+    "answers": [11]
+  },
+  {
+    "text": "What kind of support do you offer for data integration?",
+    "answers": [12]
+  },
+  {
+    "text": "Can you work with real-time data for analysis?",
+    "answers": [1, 5]
+  },
+  {
+    "text": "What are the key features of your data analysis service?",
+    "answers": [1, 2, 14]
+  },
+  {
+    "text": "Can you help us identify the most effective marketing channels for our business?",
+    "answers": [1, 2]
+  },
+  {
+    "text": "Do you offer any support in setting up and maintaining a data-driven marketing strategy?",
+    "answers": [1, 2]
+  },
+  {
+    "text": "What types of data formats can you work with?",
+    "answers": [1, 12]
+  },
+  {
+    "text": "How do you handle missing or incomplete data in the analysis?",
+    "answers": [10]
+  },
+  {
+    "text": "What measures do you take to ensure data accuracy and quality?",
+    "answers": [10]
+  },
+  {
+    "text": "Is it possible to integrate your data analysis with other business tools and platforms?",
+    "answers": [1, 12]
+  },
+  {
+    "text": "What kind of data visualization options do you offer?",
+    "answers": [14]
+  },
+  {
+    "text": "How can I export the analyzed data and reports from your service?",
+    "answers": [14]
+  },
+  {
+    "text": "Do you provide any training or resources for using your data analysis tools?",
+    "answers": [5, 6]
+  },
+  {
+    "text": "What are the pricing options for your data analysis services?",
+    "answers": [13]
+  },
+  {
+    "text": "How much does Soleda cost?",
+    "answers": [13]
+  },
+  {
+    "text": "What tech stack do you use?",
+    "answers": [15]
+  },
+  {
+    "text": "What models are you training?",
+    "answers": [15]
+  },
+  {
+    "text": "What is the technology behind Soleda?",
+    "answers": [15]
+  }
+]

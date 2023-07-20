@@ -1,0 +1,21 @@
+ContactID,FirstName,LastName,Date_Joined,Email_Address,OpportunityID,Stage,DealSize,LastContactDateTime,NextStep,DecisionMaker,Location (city),Location (state),Location (country)
+1,Ming,Zhao,2023-06-12 15:30:00,mzhao@email.com,O001,Closed won,"$2,000.00",2023-06-12 15:30:00,N/A,Yes,San Francisco,California,USA 
+2,Maria,Gonzalez,N/A,mgonzalez@email.com,O002,Qualification,"$1,500.00",2023-06-10 10:00:00,Demo,No,Madrid,Madrid,Spain 
+3,Jacob,Smith,N/A,jsmith@email.com,O003,Prospecting,"$1,000.00",2023-06-08 14:00:00,Initial Contact,No,London,England,UK
+4,Oluchi,Ihejirika,2023-06-14 15:00:00,oihejirika@email.com,O004,Closed won,"$2,500.00",2023-06-14 15:00:00,N/A,Yes,Lagos,Lagos,Nigeria 
+5,Sven,Olsson,N/A,solsson@email.com,O005,Negotiation,"$1,800.00",2023-06-14 11:00:00,Pricing Discussion,No,Stockholm,Stockholm,Sweden
+6,Clara,Martinez,2023-06-15 16:00:00,cmartinez@email.com,O006,Closed lost,"$1,200.00",2023-06-15 15:00:00,N/A,No,Buenos Aires,Buenos Aires,Argentina 
+7,Raj,Patel,2023-06-16 10:00:00,rpatel@email.com,O007,Closed won,"$2,200.00",2023-06-16 10:00:00,N/A,Yes,Mumbai,Maharashtra,India 
+8,Léa,Lefevre,N/A,llefevre@email.com,O008,Proposal,"$1,600.00",2023-06-18 14:00:00,Contract Review,No,Paris,Île-de-France,France
+9,Yusuf,Demir,N/A,ydemir@email.com,O009,Prospecting,"$1,300.00",2023-06-18 16:00:00,Initial Contact,No,Istanbul,Istanbul,Turkey
+10,Emma,Olsen,2023-06-19 14:00:00,eolsen@email.com,O010,Closed won,"$2,000.00",2023-06-19 14:00:00,N/A,Yes,Oslo,Oslo,Norway
+11,Akio,Tanaka,N/A,atanaka@email.com,O011,Qualification,"$1,700.00",2023-06-20 10:00:00,Demo,No,Tokyo,Tokyo,Japan 
+12,Maya,Ali,2023-06-20 11:00:00,mali@email.com,O012,Closed lost,"$1,500.00",2023-06-20 11:00:00,N/A,No,Cairo,Cairo,Egypt 
+13,James,Murphy,N/A,jmurphy@email.com,O013,Negotiation,"$1,900.00",2023-06-21 16:00:00,Pricing Discussion,Yes,Dublin,Leinster,Ireland 
+14,Nia,Williams,2023-06-22 14:00:00,nwilliams@email.com,O014,Closed won,"$2,100.00",2023-06-22 14:00:00,N/A,Yes,Kingston,Surrey,Jamaica 
+15,Ibrahim,Ozturk,N/A,iozturk@email.com,O015,Proposal,"$1,600.00",2023-06-23 10:00:00,Contract Review,No,Ankara,Ankara,Turkey
+16,Nina,Popova,2023-06-24 15:00:00,npopova@email.com,O016,Closed won,"$2,300.00",2023-06-24 15:00:00,N/A,Yes,Moscow,Moscow,Russia
+17,Max,Fischer,N/A,mfischer@email.com,O017,Prospecting,"$1,000.00",2023-06-24 10:00:00,Initial Contact,No,Berlin,Berlin,Germany 
+18,Amina,Hussein,2023-06-25 16:00:00,ahussein@email.com,O018,Closed lost,"$1,800.00",2023-06-25 16:00:00,N/A,No,Nairobi,Nairobi,Kenya 
+19,David,Cohen,2023-06-26 14:00:00,dcohen@email.com,O019,Closed won,"$2,200.00",2023-06-26 14:00:00,N/A,Yes,Tel Aviv,Tel Aviv,Israel
+20,Sofia,Silva,N/A,ssilva@email.com,O020,Qualification,"$1,400.00",2023-06-27 11:00:00,Demo,No,Lisbon,Lisbon,Portugal

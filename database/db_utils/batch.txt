@@ -1,0 +1,2 @@
+What's a breakdown by state|orders, customers|carry; state in customers|group by state
+How many were sold in April, broken down by customer type|customers, orders|month in orders; type in customers|filter month is April, group by type

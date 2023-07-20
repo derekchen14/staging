@@ -1,0 +1,21 @@
+TicketID,RequesterName,RequesterEmail,OpenDateTime,CloseDateTime,Status,SatisfactionRating,AssignedAgent,IssueType,ResolutionTime
+T001,Ming Zhao,mzhao@email.com,2023-06-13 10:00:00,2023-06-13 11:00:00,Solved,4,Agent1,Technical,1 hour
+T002,Maria Gonzalez,mgonzalez@email.com,2023-06-14 15:00:00,2023-06-14 16:30:00,Solved,5,Agent2,Billing,1.5 hours
+T003,Jacob Smith,jsmith@email.com,2023-06-15 9:00:00,2023-06-15 14:00:00,Solved,3,Agent3,Technical,5 hours
+T004,Oluchi Ihejirika,oihejirika@email.com,2023-06-16 11:00:00,6/16/2023 12:00:00,Solved,5,Agent4,Technical,1 hour
+T005,Sven Olsson,solsson@email.com,2023-06-17 14:00:00,2023-06-17 15:30:00,Solved,4,Agent5,Billing,1.5 hours
+T006,Clara Martinez,cmartinez@email.com,2023-06-18 13:00:00,2023-06-18 16:00:00,Solved,2,Agent1,Technical,3 hours
+T007,Raj Patel,rpatel@email.com,2023-06-19 9:00:00,2023-06-19 10:00:00,Solved,5,Agent2,Technical,1 hour
+T008,Léa Lefevre,llefevre@email.com,2023-06-20 10:00:00,2023-06-20 11:30:00,Solved,4,Agent3,Billing,1.5 hours
+T009,Yusuf Demir,ydemir@email.com,2023-06-21 15:00:00,2023-06-21 17:00:00,Solved,3,Agent4,Technical,2 hours
+T010,Emma Olsen,eolsen@email.com,2023-06-22 14:00:00,2023-06-22 15:00:00,Solved,5,Agent5,Technical,1 hour
+T011,Akio Tanaka,atanaka@email.com,2023-06-23 10:00:00,2023-06-23 11:30:00,Solved,4,Agent1,Billing,1.5 hours
+T012,Maya Ali,mali@email.com,2023-06-24 13:00:00,2023-06-24 16:00:00,Solved,3,Agent2,Technical,3 hours
+T013,James Murphy,jmurphy@email.com,2023-06-25 11:00:00,2023-06-25 12:00:00,Solved,5,Agent3,Technical,1 hour
+T014,Nia Williams,nwilliams@email.com,2023-06-26 15:00:00,2023-06-26 16:30:00,Solved,4,Agent4,Billing,1.5 hours
+T015,Ibrahim Ozturk,iozturk@email.com,2023-06-27 10:00:00,2023-06-27 12:00:00,Solved,3,Agent5,Technical,2 hours
+T016,Nina Popova,npopova@email.com,2023-06-28 13:00:00,2023-06-28 14:00:00,Solved,5,Agent1,Technical,1 hour
+T017,Max Fischer,mfischer@email.com,2023-06-29 14:00:00,2023-06-29 15:30:00,Solved,4,Agent2,Billing,1.5 hours
+T018,Amina Hussein,ahussein@email.com,2023-06-30 9:00:00,2023-06-30 12:00:00,Solved,3,Agent3,Technical,3 hours
+T019,David Cohen,dcohen@email.com,2023-07-01 10:00:00,2023-07-01 11:00:00,Solved,5,Agent4,Technical,1 hour
+T020,Sofia Silva,ssilva@email.com,2023-07-02 15:00:00,2023-07-02 16:30:00,Solved,4,Agent5,Billing,1.5 hours
