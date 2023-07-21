@@ -1,14 +1,13 @@
-#Twitter: Bek Brace
-#Instagram: Bek Brace
-
 import uvicorn
 from fastapi import FastAPI, Body, Depends
-
+from sqlalchemy.orm import sessionmaker
 
 from backend.auth.model import PostSchema, UserSchema, UserLoginSchema
 from backend.auth.auth_bearer import JWTBearer
 from backend.auth.auth_handler import signJWT
 
+from backend.db import get_db
+from database.tables import UserItem
 
 posts = [
     {
@@ -49,7 +48,7 @@ def greet():
     return {"hello": "world!."}
 
 
-# Get Posts
+# Get Posts from the database
 @app.get("/posts", tags=["posts"])
 def get_posts():
     return { "data": posts }
