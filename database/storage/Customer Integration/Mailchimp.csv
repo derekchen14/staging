@@ -1,0 +1,21 @@
+Subscriber_ID,First_Name,Last_Name,Email,Campaign_ID,Campaign_DateTime,Opened,Clicked,Unsubscribed,List_Segment,Clicked_Link           
+1,Ming,Zhao,mzhao@email.com,C001,2023-06-02 10:00:00,Yes,Yes,No,customers,www.nexstream.com/product
+2,Maria,Gonzalez,mgonzalez@email.com,C002,2023-06-03 15:00:00,Yes,No,No,prospects,N/A
+3,Jacob,Smith,jsmith@email.com,C003,2023-06-04 16:00:00,No,No,No,prospects,N/A
+4,Oluchi,Ihejirika,oihejirika@email.com,C004,2023-06-05 14:00:00,Yes,Yes,No,customers,www.nexstream.com/pricing
+5,Sven,Olsson,solsson@email.com,C005,2023-06-06 11:00:00,Yes,No,No,customers,N/A
+6,Clara,Martinez,cmartinez@email.com,C006,2023-06-07 9:00:00,No,No,No,prospects,N/A
+7,Raj,Patel,rpatel@email.com,C007,2023-06-08 13:00:00,Yes,No,Yes,customers,N/A
+8,Léa,Lefevre,llefevre@email.com,C008,2023-06-09 10:00:00,Yes,Yes,No,VIPs,www.nexstream.com/about
+9,Yusuf,Demir,ydemir@email.com,C009,2023-06-10 16:00:00,No,No,No,prospects,N/A
+10,Emma,Olsen,eolsen@email.com,C010,2023-06-11 14:00:00,Yes,Yes,No,customers,www.nexstream.com/product
+11,Akio,Tanaka,atanaka@email.com,C011,2023-06-12 11:00:00,Yes,No,No,prospects,N/A
+12,Maya,Ali,mali@email.com,C012,2023-06-13 9:00:00,No,No,Yes,customers,N/A
+13,James,Murphy,jmurphy@email.com,C013,2023-06-14 16:00:00,Yes,No,No,prospects,N/A
+14,Nia,Williams,nwilliams@email.com,C014,2023-06-15 15:00:00,Yes,Yes,No,VIPs,www.nexstream.com/pricing
+15,Ibrahim,Ozturk,iozturk@email.com,C015,2023-06-16 14:00:00,Yes,No,No,customers,N/A
+16,Nina,Popova,npopova@email.com,C016,2023-06-17 10:00:00,No,No,No,prospects,N/A
+17,Max,Fischer,mfischer@email.com,C017,2023-06-18 16:00:00,Yes,No,Yes,customers,N/A
+18,Amina,Hussein,ahussein@email.com,C018,2023-06-19 14:00:00,Yes,Yes,No,VIPs,www.nexstream.com/about
+19,David,Cohen,dcohen@email.com,C019,2023-06-20 11:00:00,Yes,No,No,prospects,N/A
+20,Sofia,Silva,ssilva@email.com,C020,2023-06-21 9:00:00,No,No,No,prospects,N/A

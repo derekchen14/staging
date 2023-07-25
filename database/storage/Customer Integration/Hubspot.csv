@@ -1,0 +1,21 @@
+LeadID,Username,Email,Source,PageVisited,VisitDateTime,FormSubmitted,FormSubmissionDateTime,LeadScore,DownloadedContent,IsConversion,ConversionTime
+1,Ming Zhao,mzhao@email.com,organic,product,2023-06-01 10:00:00,Yes,2023-06-01 10:15:00,70,Yes,TRUE,2023-06-03 11:00:00
+2,Maria Gonzalez,mgonzalez@email.com,paid ad,pricing,2023-06-02 15:30:00,No,N/A,50,No,FALSE,N/A
+3,Jacob Smith,jsmith@email.com,social,about,2023-06-03 16:00:00,Yes,2023-06-03 16:20:00,65,Yes,TRUE,2023-06-07 9:00:00
+4,Oluchi Ihejirika,oihejirika@email.com,organic,home,2023-06-04 14:00:00,No,N/A,55,No,FALSE,N/A
+5,Sven Olsson,solsson@email.com,paid ad,product,2023-06-05 11:00:00,Yes,2023-06-05 11:30:00,80,Yes,TRUE,2023-06-06 14:00:00
+6,Clara Martinez,cmartinez@email.com,social,pricing,2023-06-06 9:00:00,Yes,2023-06-06 9:20:00,85,Yes,TRUE,2023-06-10 16:00:00
+7,Raj Patel,rpatel@email.com,organic,about,2023-06-07 13:00:00,No,N/A,40,No,FALSE,N/A
+8,Léa Lefevre,llefevre@email.com,paid ad,home,2023-06-08 10:00:00,Yes,2023-06-08 10:15:00,75,Yes,TRUE,2023-06-12 15:00:00
+9,Yusuf Demir,ydemir@email.com,social,product,2023-06-09 16:00:00,No,N/A,45,No,FALSE,N/A
+10,Emma Olsen,eolsen@email.com,organic,pricing,2023-06-10 14:00 :00,Yes,2023-06-10 14:25:00,90,Yes,TRUE,2023-06-12 10:00:00
+11,Akio Tanaka,atanaka@email.com,paid ad,about,2023-06-11 11:00:00,No,N/A,60,No,FALSE,N/A
+12,Maya Ali,mali@email.com,social,home,2023-06-12 9:00:00,Yes,2023-06-12 9:20:00,80,Yes,TRUE,2023-06-14 15:00:00
+14,Nia Williams,nwilliams@email.com,paid ad,pricing,2023-06-14 15:00:00,Yes,2023-06-14 15:30:00,70,Yes,TRUE,2023-06-17 10:00:00
+17,Max Fischer,mfischer@email.com,paid ad,product,2023-06-17 16:00:00,No,N/A,45,No,FALSE,N/A
+15,Ibrahim Ozturk,iozturk@email.com,social,about,2023-06-15 14:00:00,No,N/A,55,No,FALSE,N/A
+13,James Murphy,jmurphy@email.com,organic,product,2023-06-13 16:00:00,No,N/A,50,No,FALSE,N/A
+16,Nina Popova,npopova@email.com,organic,home,2023-06-16 10:00:00,Yes,2023-06-16 10:15:00,80,Yes,TRUE,2023-06-18 15:00:00
+18,Amina Hussein,ahussein@email.com,social,pricing,2023-06-18 14:00:00,Yes,2023-06-18 14:25:00,90,Yes,TRUE,2023-06-20 10:00:00
+19,David Cohen,dcohen@email.com,organic,about,2023-06-19 11:00:00,No,N/A,60,No,FALSE,N/A
+20,Sofia Silva,ssilva@email.com,paid ad,home,2023-06-20 9:00:00,Yes,2023-06-20 9:20:00,80,Yes,TRUE,2023-06-22 15:00:00

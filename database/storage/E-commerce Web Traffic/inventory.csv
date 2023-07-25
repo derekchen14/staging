@@ -1,0 +1,124 @@
+ProductID,ProductName,ProductDescription,ProductPrice,Category,Supplier,InitialQuantity,CurrentQuantity,ReorderLevel,LastReplenishmentDate,NextReplenishmentDate
+9001,Gentle Hydrating for Dry Hair,Shampoo with aloe vera for revitalizing dry hair,20,Hair Care,LushLock Labs,500,327,100,1/10/2023,8/10/2023
+9002,Advanced Repair Moisturizer,"Our advanced moisturizer repairs and renews skin, keeping it smooth and hydrated all day",60,Skin Care,SkinLove Laboratories,500,292,100,1/10/2023,8/10/2023
+9003,Ocean Oasis Perfume,"Smells like a cool sea breeze, this perfume is a gateway to serene oceanic escapades",70,Fragrance,Aroma Elixir,400,154,50,3/15/2023,9/15/2023
+9004,Radiant Glow Liquid Foundation,"Provides full coverage while maintaining a natural glow, perfect for all-day wear",35,Makeup,CharmChic Creations,300,104,30,3/10/2023,9/10/2023
+9005,Repair & Protect Hair Mask,This mask works overnight to repair damage and protect your hair from future harm,25,Hair Care,SilkenStrand Solutions,200,81,40,4/5/2023,10/5/2023
+9006,Exfoliating Sea Salt Body Polish,"Our exfoliating body polish, with natural sea salt, buffs away dead skin cells for smoother skin",30,Beauty,Natural Allure,250,106,25,5/1/2023,11/1/2023
+9007,Firming Collagen Body Lotion,Improve skin elasticity and firmness with our collagen-infused body lotion,45,Beauty,StarDust Beauty,300,140,50,2/12/2023,8/12/2023
+9008,Antioxidant Berry Blast Serum,"Infused with a potent blend of antioxidants, this serum helps to protect your skin from environmental stressors",55,Skin Care,SkinLove Laboratories,450,225,100,4/15/2023,10/15/2023
+9009,Rejuvenating Face Oil,"Packed with essential nutrients, this face oil leaves your skin feeling soft, supple, and rejuvenated",65,Skin Care,Eternal Youth Cosmetics,200,88,20,4/5/2023,10/5/2023
+9010,Soothing Aloe Scalp Shampoo,"This gentle shampoo, enriched with aloe vera, soothes your scalp and keeps your hair healthy",20,Hair Care,Tress Treasure Treatments,350,203,50,2/20/2023,8/20/2023
+9011,Curl Defining Shampoo,"Infused with hydrating ingredients, this shampoo enhances and defines your natural curls",20,Hair Care,CrownGlow Creations,350,210,50,2/20/2023,8/20/2023
+9012,Airbrush Finish Setting Spray,"Set your makeup for long-lasting wear and enjoy a smooth, airbrushed finish",25,Makeup,CharmChic Creations,400,255,50,3/18/2023,9/18/2023
+9013,Revitalizing Gel Cleanser,A lightweight gel cleanser that revitalizes your skin while removing impurities,25,Skin Care,VitaGlow Organic,250,130,30,5/1/2023,11/1/2023
+9014,Rose Radiance Cologne,"A timeless aroma of fresh roses, a classic tribute to romance and charm",75,Fragrance,Essence Enchantment,200,60,40,4/20/2023,10/20/2023
+9015,Gentle Exfoliating Face Scrub,"Gently buffs away dead skin cells, revealing a smoother, more radiant complexion",30,Skin Care,HydraHeal Holistics,300,175,50,2/28/2023,8/28/2023
+9016,Invigorating Peppermint Foot Cream,"Our invigorating foot cream, with the cooling effect of peppermint, soothes and refreshes tired feet",15,Beauty,Radiant Charm,350,241,50,5/10/2023,11/10/2023
+9017,Shimmer & Shine Eyeshadow Palette,A versatile palette featuring a mix of shimmering and matte eyeshadows,40,Makeup,Eternal Youth Cosmetics,400,289,80,3/10/2023,9/10/2023
+9018,Stay-All-Day Liquid Eyeliner,"Our stay-all-day eyeliner offers precision and ease, for a smudge-proof, long-lasting look",15,Makeup,StarDust Beauty,250,120,30,5/15/2023,11/15/2023
+9019,Soothing Chamomile Eye Cream,"This soothing eye cream, formulated with calming chamomile, helps to reduce puffiness and under-eye circles",50,Skin Care,HydraHeal Holistics,275,122,30,4/1/2023,10/1/2023
+9020,Refreshing Cucumber Facial Mist,Hydrate and refresh your skin throughout the day with our cooling cucumber facial mist,15,Beauty,ColorPop Beauty,300,150,50,3/30/2023,9/30/2023
+9021,Floral Fragrance Perfume,Women's perfume with a floral fragrance,70,Fragrance,Aroma Elixir,300,15,50,5/8/2023,8/10/2023
+9022,Hydrating Conditioner for Color-Treated Hair,Specifically designed to protect color-treated hair,25,Hair Care,LushLock Labs,550,138,40,3/1/2023,8/27/2023
+9023,Curl Enhancing Gel,"This gel enhances your natural curls, adding definition without any stiffness",20,Hair Care,Hair Harmony Holistics,600,72,80,1/1/2023,7/2/2023
+9024,Gentle Rosehip Oil Cleanser,"Our gentle cleanser, formulated with rosehip oil, helps to remove dirt and makeup while hydrating your skin",35,Skin Care,Pure Touch Therapeutics,700,175,100,12/5/2022,8/3/2023
+9025,Bold and Beautiful Eyeshadow Quad,"Four bold, complementary shades of eyeshadow for creating a variety of vibrant looks",40,Makeup,BellaCanvas Colors,600,396,80,1/25/2023,8/24/2023
+9026,Vibrant Pink Lipstick,Stand out with a vibrant pink lips,15,Makeup,Eternal Youth Cosmetics,700,476,90,4/10/2023,9/4/2023
+9027,Anti-Hair Fall Shampoo,A nutrient-rich formula that helps reduce hair fall and promotes stronger hair roots,20,Hair Care,Hair Harmony Holistics,500,185,50,4/25/2023,10/16/2023
+9028,Smooth Canvas Face Primer,"This smoothing primer preps your skin for makeup, providing a flawless canvas for application",30,Makeup,Made You Blush,150,105,50,4/27/2023,10/23/2023
+9029,Nutrient-Rich Conditioner for Damaged Hair,"Packed with essential nutrients, this conditioner helps repair and revitalize damaged hair",30,Hair Care,CrownGlow Creations,200,150,60,5/11/2023,10/4/2023
+9030,Moisturizing Shea Butter Hand Cream,Keep your hands soft and smooth with our deeply moisturizing shea butter hand cream,15,Beauty,LuxeNaturals,350,294,60,11/3/2022,10/30/2023
+9031,Repairing Hair Mask,Intensive hair mask for damaged hair,25,Hair Care,SilkenStrand Solutions,500,230,100,3/21/2023,7/17/2023
+9032,Natural Radiance BB Cream,Our BB cream offers light coverage and a radiant finish for an effortless everyday look,35,Makeup,BellaCanvas Colors,350,32,100,5/25/2023,11/27/2023
+9033,Long-Wear Gel Eyeliner,"Enjoy a bold, intense line that lasts all day with our smudge-proof gel eyeliner",20,Makeup,GlitterGlam Cosmetics,250,182,50,2/21/2023,8/31/2023
+9034,Lavender Love Perfume,A soothing aroma of lavender fields that eases the mind and calms the senses,75,Fragrance,Essence Enchantment,500,155,70,1/28/2023,10/10/2023
+9035,Glow-Boosting Overnight Mask,This overnight mask works while you sleep to reveal a radiant complexion by morning,40,Skin Care,SkinLove Laboratories,300,240,70,4/26/2023,7/9/2023
+9036,Energizing Citrus Body Wash,Refresh and cleanse your skin with our energizing citrus body wash,20,Beauty,LuxeNaturals,200,174,30,2/22/2023,11/21/2023
+9037,Deep Moisture Hair Mask,"An intensely hydrating mask that restores moisture to dry, over-processed hair",30,Hair Care,Hair Harmony Holistics,150,112,50,5/23/2023,11/18/2023
+9038,Age-Defying Retinol Serum,"Our powerful serum with retinol fights signs of aging, promoting a more youthful-looking complexion",65,Skin Care,Pure Touch Therapeutics,300,234,90,12/22/2022,8/27/2023
+9039,Skin Perfecting Loose Powder,"Our loose powder sets makeup and blurs imperfections, giving your skin a flawless finish",25,Makeup,Made You Blush,,28,90,1/17/2023,9/5/2023
+9040,Velvet Touch Foundation,Liquid foundation for a flawless look,35,Makeup,BellaCanvas Colors,500,75,75,12/8/2022,9/10/2023
+9041,Hand Cream w/ Maximizing Moisturize,Hand cream with shea butter,15,Skin Care,VitaGlow Organic,200,30,80,3/11/2023,10/7/2023
+9042,Deep Cleansing Hand Wash,Antibacterial hand wash with aloe vera,10,Skin Care,Radiant Revival Remedies,450,328,80,5/11/2023,10/3/2023
+9043,Spiced Sandalwood Perfume,"A tranquil aroma of sandalwood, touched with a hint of aromatic spices",75,Fragrance,Fragrance Fantasia,500,405,75,3/18/2023,10/28/2023
+9044,Gentle Oatmeal Face and Body Soap,"Our soap, enriched with soothing oatmeal, is gentle enough for use on both face and body",15,Beauty,LuxeNaturals,500,430,20,11/7/2022,11/28/2023
+9045,Illuminating Highlighter Palette,This palette features a range of illuminating highlighters to accentuate your best features,35,Makeup,CharmChic Creations,600,474,80,11/30/2022,7/24/2023
+9046,Soothing Aloe Vera After-Sun Gel,Cool and soothe your skin after sun exposure with our calming aloe vera gel,15,Beauty,LuxeNaturals,400,40,30,11/26/2022,9/18/2023
+9047,Deep Hydration Body Butter,"A rich, creamy body butter that deeply hydrates and leaves your skin feeling silky smooth",20,Skin Care,Radiant Revival Remedies,350,252,80,1/16/2023,8/17/2023
+9048,Oriental Fragrance Perfume,The perfect womens perfume with an oriental fragrance,70,Fragrance,Essence Enchantment,550,138,75,3/20/2023,9/28/2023
+9049,Sun Protection SPF 50+ Cream,"Protect your skin from harmful UV rays with our lightweight, non-greasy sun cream",30,Skin Care,Pure Touch Therapeutics,250,225,40,11/17/2022,10/18/2023
+9050,Lip Conditioner with SPF,Keep your lips hydrated and protected from the sun with our nourishing lip conditioner with SPF,10,Makeup,CharmChic Creations,350,94,80,11/17/2022,8/11/2023
+9051,Calming Chamomile Sleep Spray,A calming spray with chamomile to help prepare you for a peaceful night's sleep,20,Beauty,LuxeNaturals,100,72,75,11/4/2022,11/8/2023
+9052,Natural Mineral Blush,Blush with natural minerals for a healthy glow,30,Beauty,Natural Allure,350,130,60,5/8/2023,8/29/2023
+9053,Refreshing Rose Water Mist,Spritz on some freshness with our rose water mist that hydrates and calms skin,15,Skin Care,SkinLove Laboratories,150,110,80,12/19/2022,10/7/2023
+9054,Jasmine Joy Perfume,Revel in the intoxicating aroma of blooming jasmine on a moonlit night,70,Fragrance,Ethereal Aromatics,500,295,80,2/15/2023,9/8/2023
+9055,Brightening Under-Eye Cream,Diminish dark circles and revive tired eyes with our brightening under-eye cream,45,Skin Care,VitaGlow Organic,400,140,75,11/9/2022,9/18/2023
+9056,Detangling Silk Protein Hair Spray,Effortlessly detangle your hair and protect it from heat damage with our silk protein hair spray,25,Hair Care,Hair Harmony Holistics,250,162,100,1/7/2023,7/26/2023
+9057,Soothing Green Tea Toner,A calming toner that minimizes pores and soothes skin with the power of green tea,25,SkinCare,VitaGlow Organic,100,61,50,4/29/2023,7/14/2023
+9058,Detoxifying Scalp Scrub,"Gently exfoliates your scalp, removing build-up and promoting healthier hair growth",25,Hair,SilkenStrand Solutions,550,447,30,4/5/2023,7/26/2023
+9059,Daily Defense Face Lotion with SPF,Our daily face lotion hydrates your skin while also providing SPF protection,30,Skin Care,SkinLove Laboratories,450,140,50,3/28/2023,10/23/2023
+9060,Orchid Opulence Cologne,"A luxurious and elegant scent, reminiscent of rare and exotic orchids.",80,Fragrance,Aroma Elixir,600,180,70,4/24/2023,9/1/2023
+9061,Brow Perfecting Pencil,"Easily define and fill in brows with our precision brow pencil for a natural, polished look",15,Makeup,Eternal Youth Cosmetics,550,77,80,11/8/2022,10/12/2023
+9062,Velvet Vanilla Perfume,"Sweet, creamy, and comforting - this perfume wraps you in the pure joy of rich vanilla",70,Fragrance,Scent Symphony,400,104,90,11/18/2022,10/12/2023
+9063,Volume Max Waterproof Mascara,"A waterproof formula that volumizes and lifts lashes for a dramatic look, rain or shine",20,Makeup,Made You Blush,400,192,100,4/13/2023,11/23/2023
+9064,Radiance Boosting Sheet Mask,"Infuse your skin with a radiant glow with our hydrating sheet mask, perfect for a quick pamper session",10,Skin Care,Pure Touch Therapeutics,300,51,80,11/14/2022,7/8/2023
+9065,Lush Lashes Lengthening Mascara,"Achieve long, lush lashes with our specially formulated lengthening mascara",20,Makeup,StarDust Beauty,600,534,75,3/5/2023,7/27/2023
+9066,Fruity Fusion Cologne,"A lively blend of fresh fruits, this cologne is a burst of joy and exuberance",75,Fragrance,Ethereal Aromatics,300,102,50,2/24/2023,10/18/2023
+9067,Invigorating Eucalyptus Body Scrub,"Scrub exfoliates dead skin cells, leaving your skin feeling refreshed and rejuvenated",25,Skin Care,HydraHeal Holistics,250,182,75,12/9/2022,8/27/2023
+9068,Detoxifying Clay Face Mask,This detoxifying mask draws out impurities and refines skin texture for a clearer complexion,20,Skin Care,VitaGlow Organic,300,63,25,5/5/2023,11/28/2023
+9069,Peppermint Passion Perfume,"Invigorating and fresh, this scent is a cool minty breeze that awakens the senses",70,Fragrance,Scent Symphony,700,637,75,11/26/2022,8/4/2023
+9070,Lemon Fresh Face Cleanser,Refreshing body wash with a lemon scent,25,SkinCare,HydraHeal Holistics,500,180,75,5/17/2023,8/10/2023
+9071,Silky Smooth for Frizzy Hair,"Turn your frizzy hair into silky smooth locks, now with keratin!",20,Hair Care,CrownGlow Creations,150,39,90,5/12/2023,7/6/2023
+9072,Strengthening Serum for Brittle Hair,A potent serum designed to restore strength and flexibility to brittle hair,35,Hair Care,SilkenStrand Solutions,250,215,40,1/23/2023,10/18/2023
+9073,Woody Fragrance Cologne,"Men's cologne with a woody, earthy fragrance",75,Fragrance,Fragrance Fantasia,250,38,70,5/24/2023,7/28/2023
+9074,Color Burst Lip Liner,"Define your lips and enhance your lipstick with our smooth, highly pigmented lip liners",15,Makeup,Eternal Youth Cosmetics,350,294,50,12/15/2022,7/31/2023
+9075,Thickening Treatment for Thinning Hair,"Enriched with proteins, this treatment promotes thicker, fuller-looking hair",35,Hair Care,Tress Treasure Treatments,200,108,100,2/18/2023,11/28/2023
+9076,Smooth & Shine Hair Oil,This oil blend tames frizz and imparts a silky shine for camera-ready hair,30,Hair Care,SilkenStrand Solutions,350,94,20,1/29/2023,10/23/2023
+9077,Cool Water Cologne,"Top selling cologne with a fresh, aquatic scent",75,Fragrance,Fragrance Fantasia,550,242,70,1/18/2023,10/10/2023
+9078,Shine Enhancing Shampoo,Shampoo for enhancing shine in hair,20,Hair Care,Hair Harmony Holistics,600,300,160,11/1/2022,9/1/2023
+9079,Aloe Vera Body Lotion,Body lotion with aloe vera for all skin types,20,Skin Care,SkinLove Laboratories,150,100,75,2/9/2023,8/5/2023
+9080,Overnight Hair Repair Serum,"Works while you sleep, repairing and rejuvenating your hair for a healthy shine in the morning",35,Hair Care,SilkenStrand Solutions,550,116,50,11/15/2022,10/19/2023
+9081,Whispering Willow Perfume,"A gentle, airy scent inspired by the cool shade of willow trees by the stream",70,Fragrance,Scent Symphony,550,33,20,11/18/2022,10/26/2023
+9082,Glossy Glam Conditioner,Our conditioner brings a luxurious shine and softness to your hair with every use,25,Hair Care,Hair Harmony Holistics,550,72,100,3/31/2023,8/26/2023
+9083,Citrus Twist Cologne,A tangy burst of citrusy freshness to keep you invigorated all day long,75,Fragrance,Scent Symphony,500,345,100,3/23/2023,8/25/2023
+9084,Blossom Bouquet Cologne,"A lush and floral scent, reminiscent of a walk through a blooming garden",75,Fragrance,Ethereal Aromatics,300,159,30,4/6/2023,10/29/2023
+9085,Clean & Clear Rejuvenating Face Cleanser,"Face cream with vitamins A, C, and E",25,Skin Care,SkinLove Laboratories,400,168,75,4/27/2023,9/1/2023
+9086,Revitalizing Eucalyptus Shower Gel,"This revitalizing shower gel, enriched with eucalyptus, refreshes your skin and stimulates your senses",20,Beauty,Natural Allure,500,175,100,5/19/2023,10/26/2023
+9087,Volume Boost Conditioner,Conditioner for adding volume to hair,25,Hair Care,LushLock Labs,300,75,90,11/29/2022,11/3/2023
+9088,Healing Tea Tree Oil Blemish Stick,"Treat blemishes on the go with our convenient, tea tree oil-infused blemish stick",15,Beauty,ColorPop Beauty,600,90,60,11/12/2022,7/31/2023
+9089,Smoothing Coconut Body Scrub,"Gently exfoliate and hydrate your skin with our natural, coconut-infused body scrub",25,Beauty,Radiant Charm,250,200,60,11/8/2022,8/11/2023
+9090,Nourishing Oil for Split Ends,A nourishing blend of oils that helps seal split ends and prevent future breakage,30,Hair Care,Hair Harmony Holistics,350,238,25,4/14/2023,10/11/2023
+9091,Revitalizing Eye Cream,Eye cream to reduce puffiness and dark circles,50,Skin Care,SkinLove Laboratories,450,166,150,12/28/2022,10/23/2023
+9092,Hydrating Hyaluronic Acid Serum,"Plumps and revitalizes, thanks to the moisture-locking properties of hyaluronic acid",55,Skin Care,Eternal Youth Cosmetics,400,18,25,1/23/2023,10/16/2023
+9093,Heat Protection Spray,"Protect your hair from heat damage with our lightweight, non-greasy spray",25,Hair Care,Hair Harmony Holistics,250,215,90,3/29/2023,9/17/2023
+9094,Hydrating Avocado Sleeping Mask,"Overnight mask that deeply hydrates and nourishes your skin, enriched with the natural goodness of avocado",30,Beauty,Natural Allure,450,54,20,11/13/2022,7/23/2023
+9095,Bergamot Bliss Perfume,A zesty and vibrant perfume that adds a delightful bounce to your steps,70,Fragrance,Aroma Elixir,300,243,80,12/31/2022,10/5/2023
+9096,Rosy Glow Cream Blush,"A cream blush formula that blends seamlessly into your skin, providing a fresh, rosy glow",30,Makeup,Eternal Youth Cosmetics,650,494,100,2/21/2023,10/27/2023
+9097,Nourishing Night Cream,Restore your skin's natural beauty as you sleep with our deeply nourishing night cream,40,Skin Care,Pure Touch Therapeutics,550,319,50,5/25/2023,8/8/2023
+9098,Restorative Argan Hair Oil,Nourish and restore shine to your hair with our lightweight argan oil formula,35,Hair Care,Tress Treasure Treatments,700,308,50,11/9/2022,9/17/2023
+9099,Warming Vanilla Bath Oil,Transform your bath into a nourishing spa experience with our warming vanilla bath oil,25,Beauty,Natural Allure,200,56,20,1/17/2023,7/28/2023
+9100,Mystic Musk Cologne,A deep and rich musk scent that's an ode to enigma and charisma,75,Fragrance,Fragrance Fantasia,700,91,70,11/1/2022,8/1/2023
+9101,Collagen Boosting Eye Gel,"Improve the skin around your eyes with collagen, reduce the appearance of fine lines and puffiness",40,Skin Care,HydraHeal Holistics,400,352,75,5/25/2023,9/18/2023
+9102,Amber Embrace Cologne,"A warm, woody fragrance that conjures the feel of an evening spent by the fire",80,Fragrance,Aroma Elixir,200,122,30,3/2/2023,9/26/2023
+9103,Anti-dandruff 2-in-1 Shampoo & Conditioner,Best Doctor-recommended shampoo for treating dandruff,20,Hair Care,CrownGlow Creations,350,332,30,4/20/2023,11/27/2023
+9104,Relaxing Lavender Bath Bomb,"Infuse your bath with the calming aroma of lavender for a relaxing, spa-like experience at home",10,Beauty,LuxeNaturals,500,45,100,1/8/2023,8/31/2023
+9105,Pout Perfect Matte Lipstick,"Enjoy a rich, velvety matte finish with our long-lasting lipstick in various stunning shades",20,Makeup,CharmChic Creations,450,27,50,11/29/2022,10/31/2023
+9106,Refreshing Minty Scalp Serum,"Enjoy the cooling sensation of mint while this serum promotes a healthy, balanced scalp",30,Hair Care,CrownGlow Creations,500,345,50,4/16/2023,10/6/2023
+9107,Honey Haze Perfume,"Sweet and comforting, this perfume has the intoxicating aroma of blooming flowers drenched in golden honey",75,Fragrance,Essence Enchantment,200,148,75,4/25/2023,9/17/2023
+9108,Volumizing Mousse for Fine Hair,"Get that extra lift and body with our lightweight mousse, perfect for fine hair",25,Hair Care,CrownGlow Creations,450,198,90,1/20/2023,8/5/2023
+9109,Sensitive Skin Facial Cleanser,"A gentle, fragrance-free cleanser formulated specifically for sensitive skin types",25,Skin Care,Radiant Revival Remedies,450,96,75,2/4/2023,10/30/2023
+9110,Anti-Frizz Leave-In Cream,"Say goodbye to frizz and hello to smooth, manageable hair with our leave-in cream",25,Hair Care,CrownGlow Creations,400,262,60,1/20/2023,8/31/2023
+9111,Brightening Vitamin C Cream,"Enriched with Vitamin C, this cream brightens your complexion and defends against environmental damage",45,Skin Care,Radiant Revival Remedies,250,187,60,2/4/2023,8/5/2023
+9112,Rejuvenating Rose Petal Face Steam,Treat your skin to a rejuvenating at-home spa experience with our calming rose petal face steam,15,Beauty,StarDust Beauty,200,193,25,4/27/2023,8/18/2023
+9113,Color-Preserving Shampoo,"Preserve the vibrancy of your colored hair with our gentle, sulfate-free shampoo",20,Hair Care,CrownGlow Creations,350,277,100,1/25/2023,11/9/2023
+9114,Sun-Kissed Bronzer Duo,Add a natural-looking sun-kissed glow to your skin with our blendable bronzer duo,35,Makeup,Eternal Youth Cosmetics,550,340,120,11/27/2022,11/6/2023
+9115,Tropical Breeze Perfume,"A vibrant and lively perfume, evoking images of sandy beaches and tropical fruits",70,Fragrance,Ethereal Aromatics,600,136,55,11/15/2022,10/16/2023
+9116,Hydrating Lip Gloss,A hydrating gloss that adds a luscious shine to your lips while keeping them moisturized,15,Makeup,StarDust Beauty,200,193,75,12/28/2022,10/6/2023
+9117,Pro Contour Kit,A professional-grade contour kit that helps sculpt and define your facial features,40,Makeup,BellaCanvas Colors,100,66,20,12/13/2022,10/29/2023
+9118,Balancing Tea Tree Face Wash,"Achieve a clear, refreshed complexion with our balancing face wash formulated with tea tree oil",20,Skin Care,Radiant Revival Remedies,600,266,85,11/8/2022,9/18/2023
+9119,Brightening Coffee Under-Eye Patches,These coffee-infused patches brighten and de-puff your under-eye area for a more alert and refreshed look,15,Beauty,Radiant Charm,400,69,50,1/30/2023,8/12/2023
+9120,Enchanted Forest Cologne,"A woody, earthy scent that transports you to a tranquil forest retreat",80,Fragrance,Fragrance Fantasia,500,426,25,1/15/2023,11/2/2023
+9121,Bold Red Lipstick,Lipstick with a bold look for a night out,25,Makeup,CharmChic Creations,300,180,25,2/22/2023,8/28/2023
+9122,Charcoal Pore Minimizing Mask,This purifying charcoal mask helps draw out impurities and reduce the appearance of pores,30,Skin Care,Radiant Revival Remedies,500,365,20,10/23/2022,11/9/2023
+9123,Invigorating Scalp Massage Brush,"Enhance your hair care routine with our scalp massage brush, designed to stimulate blood circulation and promote healthy hair growth",35,Beauty,LuxeNaturals,400,401,100,2/9/2023,11/16/2023

@@ -1,9 +1,15 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Depends, Body
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import HTMLResponse
 from typing import List, Dict
 from pydantic import BaseModel
-from chat import get_chat, add_chat, reset_chat
+from backend.chat import get_chat, add_chat, reset_chat
+from backend.auth.schema import UserSchema, UserLoginSchema
+from backend.auth.authentication import signJWT
+from backend.auth.authorization import JWTBearer
+from backend.db import get_db
+from database.tables import UserItem, AgentItem, UtteranceItem
+
 
 app = FastAPI()
 app.add_middleware(
@@ -44,3 +50,25 @@ def post_message(message: Message):
 def reset():
     reset_chat()
     return {"status": "success"}
+
+@app.post("/user/signup", tags=["user"])
+def create_user(user: UserSchema, db = Depends(get_db)):
+    user_item = UserItem(
+        first = user.first,
+        last = user.last,
+        email = user.email,
+    )
+    user_item.password = user_item.set_password(user.password)
+    db.add(user_item)
+    db.commit()
+    db.refresh(user_item)
+    return signJWT(user_item.email)
+
+@app.post("/user/login", tags=["user"])
+def user_login(user: UserLoginSchema = Body(...), db=Depends(get_db)):
+    user_from_db = db.query(UserItem).filter(UserItem.email == user.email).first()
+
+    if user_from_db and user_from_db.check_password(user.password):
+        return signJWT(user_from_db.email)
+
+    return {"error": "Wrong login details!"}
