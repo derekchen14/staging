@@ -20,14 +20,12 @@
       if (response.ok) {
         feedback = 'User created successfully!';
       } else {
-        feedback = 'Failed to create user. Please try again.';
+        feedback = 'Failed to create user.  Please try again.';
       }
     }
 
     const signup = async (user) => { 
     // Make a POST request to the backend API for user signup
-    console.log("in auth.js")  
-    console.log("this is user: ", user)
     const response = await fetch('http://localhost:8000/user/signup', {
         method: 'POST',
         headers: {
@@ -35,8 +33,6 @@
         },
         body: JSON.stringify(user),
     });
-    console.log("This is response:", response)
-    console.log("out")
     const data = await response.json(); // Assuming the response is JSON data, parse it
     console.log("This is the data: ", data)
     return response; // Return the response data to handle it in the calling function

@@ -1,4 +1,4 @@
-from fastapi import FastAPI, Depends, Body
+from fastapi import FastAPI, Depends, Body, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import HTMLResponse
 from typing import List, Dict
@@ -53,12 +53,17 @@ def reset():
 
 @app.post("/user/signup", tags=["user"])
 def create_user(user: UserSchema, db = Depends(get_db)):
+    if db.query(UserItem).filter(UserItem.email == user.email).first():
+        raise HTTPException(status_code=400, detail="Email already exists")
     user_item = UserItem(
         first = user.first,
         last = user.last,
         email = user.email,
     )
     user_item.password = user_item.set_password(user.password)
+    """user_from_db = db.query(user_item).filter(user_item.email == user_item.email).first()
+    if user_from_db:
+        return {"error": "Account already exists."}"""
     db.add(user_item)
     db.commit()
     db.refresh(user_item)
