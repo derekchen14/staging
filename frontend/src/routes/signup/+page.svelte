@@ -47,7 +47,6 @@
   </script>
   
   <main>
-    <h1>Signup Page</h1>
   
     <form on:submit|preventDefault={handleSignup} class="flex mx-auto col-6">
   
@@ -70,9 +69,11 @@
         <label for="password" class="form-label">Password</label>
         <input type="password" class="form-control" id="password" bind:value={password} />
       </div>
-  
-      <button type="submit" class="btn btn-primary">Signup</button>
       
+      <div class="submit-container">
+      <button type="submit" class="btn btn-primary">Signup</button>
+      </div>
+
       <!-- Use the error variable to display any signup feedback -->
       <div class="text-danger">
         {#if feedback}
@@ -83,6 +84,50 @@
     </form>
   </main>
   
+  <style>
+	/* Center the form horizontally */
+	form {
+	  display: flex;
+	  flex-direction: column;
+	  align-items: center;
+	  justify-content: center;
+	  height: 100vh;
+	}
   
+	.form-label {
+	  display: block;
+	  font-size: 1rem;
+	  font-weight: bold;
+	  margin-bottom: 0.5rem;
+	}
   
+	.form-control {
+	  width: 100%;
+	  padding: 0.5rem;
+	  font-size: 1rem;
+	  border: 1px solid #ccc;
+	  border-radius: 0.25rem;
+	}
   
+	.btn-primary {
+	  padding: 0.5rem 1rem;
+	  font-size: 1rem;
+	  border: none;
+	  border-radius: 0.25rem;
+	  background-color: #007bff;
+	  color: #fff;
+	  cursor: pointer;
+	  margin-top: 1rem;
+
+	}
+  
+	.btn-primary:hover {
+	  background-color: #0056b3;
+	}
+  
+	.text-danger {
+	  color: #dc3545;
+	  font-size: 0.875rem;
+	  margin-top: 0.25rem;
+	}
+  </style>

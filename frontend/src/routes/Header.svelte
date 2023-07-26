@@ -12,10 +12,10 @@
 		<ul>
 			{#if !$JWTtoken}
 				<li aria-current={$page.url.pathname === '/application' ? 'page' : undefined}>
-					<a href="/login">Try Demo</a>
+					<a href="/loginbuffer">Try Demo</a>
 				</li>
 				<li aria-current={$page.url.pathname.startsWith('/login') ? 'page' : undefined}>
-					<a href="/login">Log-In</a>
+					<a href="/loginbuffer">Log-In</a>
 				</li>
 				<li aria-current={$page.url.pathname.startsWith('/signup') ? 'page' : undefined}>
 					<a href="/signup">Sign-Up</a>
@@ -31,9 +31,6 @@
 				<a href="https://morethanoneturn.com/">Blog</a>
 			</li>
 			{#if $JWTtoken}
-				<li aria-current={$page.url.pathname === '/application' ? 'page' : undefined}>
-					<a href="/application">Dana</a>
-				</li>
 				<li aria-current={$page.url.pathname.startsWith('/logout') ? 'page' : undefined}>
 					<a href="/logout">Log-Out</a>
 				</li>

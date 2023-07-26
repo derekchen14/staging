@@ -23,14 +23,17 @@
 	}
 
 	async function login() {
-		console.log("In login")
+		if (username.trim() === '' || password.trim() === ''){
+			error = 'Please fill in username and password.';
+			return ;
+		}
+
 		const response = await getUserDetails( username, password )
 
 		if (response) {
 			$JWTtoken = response;
 		} else {
 			error = 'Incorrect username and password.';
-			console.log('Incorrect username and password.');
   		}
 	}
 
@@ -48,10 +51,60 @@
 		<input type="password" class="form-control" id="password" bind:value={password} />
 	</div>
 
+	<div class="submit-container">
 	<button type="submit" class="btn btn-primary">Submit</button>
+	</div>
+
 	<div id="error_message" class="text-danger">
 		<small>{error}</small>
 	</div>
 
 </form>
 
+<style>
+	/* Center the form horizontally */
+	form {
+	  display: flex;
+	  flex-direction: column;
+	  align-items: center;
+	  justify-content: center;
+	  height: 100vh;
+	}
+  
+	.form-label {
+	  display: block;
+	  font-size: 1rem;
+	  font-weight: bold;
+	  margin-bottom: 0.5rem;
+	}
+  
+	.form-control {
+	  width: 100%;
+	  padding: 0.5rem;
+	  font-size: 1rem;
+	  border: 1px solid #ccc;
+	  border-radius: 0.25rem;
+	}
+  
+	.btn-primary {
+	  padding: 0.5rem 1rem;
+	  font-size: 1rem;
+	  border: none;
+	  border-radius: 0.25rem;
+	  background-color: #007bff;
+	  color: #fff;
+	  cursor: pointer;
+	  margin-top: 1rem;
+
+	}
+  
+	.btn-primary:hover {
+	  background-color: #0056b3;
+	}
+  
+	.text-danger {
+	  color: #dc3545;
+	  font-size: 0.875rem;
+	  margin-top: 0.25rem;
+	}
+  </style>
