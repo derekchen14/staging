@@ -1,6 +1,6 @@
 <script>
     import { onMount } from 'svelte';
-    
+
     let first = '';
     let last = '';
     let email = '';
@@ -9,6 +9,10 @@
 
     const handleSignup = async () => {
     //Takes in the users' inputs to form fields.
+      if (!first || !last || !email || !password) {
+        feedback = 'Please fill in all the fields.';
+        return;
+      }
       const user = {
         first: first, // The user's first name, taken from the firstField variable
         last: last, // The user's last name, taken from the lastField variable
@@ -18,9 +22,10 @@
   
       const response = await signup(user);
       if (response.ok) {
+        console.log("response is: ", response)
         feedback = 'User created successfully!';
       } else {
-        feedback = 'Failed to create user.  Please try again.';
+        feedback = 'User already exists. Please try again.';
       }
     }
 
@@ -33,8 +38,10 @@
         },
         body: JSON.stringify(user),
     });
+    console.log("This is the unparsed data: ", response)
     const data = await response.json(); // Assuming the response is JSON data, parse it
-    console.log("This is the data: ", data)
+    console.log("This is the parsed data: ", data)
+    
     return response; // Return the response data to handle it in the calling function
     }
   </script>

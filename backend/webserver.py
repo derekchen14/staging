@@ -61,9 +61,6 @@ def create_user(user: UserSchema, db = Depends(get_db)):
         email = user.email,
     )
     user_item.password = user_item.set_password(user.password)
-    """user_from_db = db.query(user_item).filter(user_item.email == user_item.email).first()
-    if user_from_db:
-        return {"error": "Account already exists."}"""
     db.add(user_item)
     db.commit()
     db.refresh(user_item)
@@ -75,5 +72,5 @@ def user_login(user: UserLoginSchema = Body(...), db=Depends(get_db)):
 
     if user_from_db and user_from_db.check_password(user.password):
         return signJWT(user_from_db.email)
-
+    
     return {"error": "Wrong login details!"}

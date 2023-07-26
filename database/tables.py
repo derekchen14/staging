@@ -27,7 +27,7 @@ class UserItem(Base):
 
   def check_password(self, password):
     password_to_check = password.encode('utf-8')
-    stored_password = self._password.encode('utf-8')
+    stored_password = self.password.encode('utf-8')
     return bcrypt.checkpw(password_to_check, stored_password)
 
 class AgentItem(Base):
