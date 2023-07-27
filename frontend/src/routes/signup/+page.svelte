@@ -22,7 +22,6 @@
   
       const response = await signup(user);
       if (response.ok) {
-        console.log("response is: ", response)
         feedback = 'User created successfully!';
       } else {
         feedback = 'User already exists. Please try again.';
@@ -38,9 +37,7 @@
         },
         body: JSON.stringify(user),
     });
-    console.log("This is the unparsed data: ", response)
     const data = await response.json(); // Assuming the response is JSON data, parse it
-    console.log("This is the parsed data: ", data)
     
     return response; // Return the response data to handle it in the calling function
     }

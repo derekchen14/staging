@@ -2,4 +2,5 @@
 
 import { writable } from 'svelte/store';
 
-export const JWTtoken = writable(null);
+export const JWTtoken = writable('');
+

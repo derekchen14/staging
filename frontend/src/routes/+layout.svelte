@@ -1,6 +1,8 @@
 <script>
 	import Header from './Header.svelte';
-	import './styles.css';
+	import './styles.css';	
+	import { getCookie } from './getCookie';
+
 </script>
 
 <div class="app">

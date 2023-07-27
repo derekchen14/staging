@@ -1,7 +1,23 @@
 <script>
 	import { page } from '$app/stores';
   	import Logo from './Logo.svelte';
-	import { JWTtoken } from './store'
+	import { JWTtoken } from './store';
+	import { onMount } from 'svelte';
+	import { getCookie } from './getCookie';
+	let accessToken;
+	let authorized; 
+	onMount(() => {
+		accessToken = getCookie('access_token');
+		
+		// Check if the access token is NOT present. If not, redirect to the login page.
+		if (!accessToken) {
+		authorized = 0;
+		}
+		else{ authorized = 1; 
+		}
+  	});
+
+
 </script>
 
 <header>
@@ -10,7 +26,7 @@
 	</div>
 	<nav>
 		<ul>
-			{#if !$JWTtoken}
+			{#if !authorized}
 				<li aria-current={$page.url.pathname === '/application' ? 'page' : undefined}>
 					<a href="/loginbuffer">Try Demo</a>
 				</li>
@@ -30,7 +46,10 @@
 			<li aria-current={$page.url.pathname.startsWith('/blog') ? 'page' : undefined}>
 				<a href="https://morethanoneturn.com/">Blog</a>
 			</li>
-			{#if $JWTtoken}
+			{#if authorized}
+				<li aria-current={$page.url.pathname.startsWith('/application') ? 'page' : undefined}>
+					<a href="/application">Dana</a>
+				</li>
 				<li aria-current={$page.url.pathname.startsWith('/logout') ? 'page' : undefined}>
 					<a href="/logout">Log-Out</a>
 				</li>

@@ -1,49 +1,70 @@
 <script>
 	import { JWTtoken } from '../store';
 
-	let username = '';
+	let email = '';
 	let password = '';
 	let error = ''
 
-	const getUserDetails = async (username, password) => {
-	// Make a POST request to the backend API for user login
-	const response = await fetch('http://localhost:8000/user/login', {
-		method: 'POST',
-		headers: {
-		'Content-Type': 'application/json',
-		},
-		body: JSON.stringify({
-			email: username,  // In the backend, the email field is used for login, so we'll use it here as the username
-			password: password,
-		}),
-	});
+	function parseCookies() {
+	const cookies = document.cookie.split(';').reduce((cookiesObject, cookie) => {
+		const [name, value] = cookie.split('=');
+		cookiesObject[name.trim()] = decodeURIComponent(value.trim());
+		return cookiesObject;
+	}, {});
 
-	const data = await response.json(); // Assuming the response is JSON data, parse it
-	return data; // Return the response data to handle it in the calling function
+	return cookies;
+	}
+
+	const getUserDetails = async (email, password) => {
+	// Make a POST request to the backend API for user login
+		const response = await fetch('http://localhost:8000/user/login', {
+			method: 'POST',
+			headers: {
+			'Content-Type': 'application/json',
+			},
+			body: JSON.stringify({
+				email: email, 
+				password: password,
+			}),
+			credentials: 'include',
+		});
+		const cookies = parseCookies();
+		const access_token = cookies.access_token; 
+		if (access_token != null) {
+			$JWTtoken = access_token;
+		}
+		return response;
 	}
 
 	async function login() {
-		if (username.trim() === '' || password.trim() === ''){
-			error = 'Please fill in username and password.';
+		if (email.trim() === '' || password.trim() === ''){
+			error = 'Please fill in email and password.';
 			return ;
 		}
 
-		const response = await getUserDetails( username, password )
-
-		if (response) {
-			$JWTtoken = response;
-		} else {
-			error = 'Incorrect username and password.';
-  		}
+		try {
+			const response = await getUserDetails(email, password);
+			
+			if (response.ok) {
+				error = 'You have successfully logged in.';
+				window.location.href = '/application';
+			} else {
+			error = 'Incorrect email and password.';
+			redirect: '/application'
+			}
+		} catch (error) {
+			console.error(error);
+			error = 'An error occurred during login.';
+		}
 	}
-
+	
 </script>
 
 <form on:submit|preventDefault={login} class="flex mx-auto col-6">
 
 	<div class="mb-3">
-		<label for="username" class="form-label">Username</label>
-		<input type="email" class="form-control" id="username" bind:value={username} />
+		<label for="email" class="form-label">Email</label>
+		<input type="email" class="form-control" id="email" bind:value={email} />
 	</div>
 
 	<div class="mb-3">
